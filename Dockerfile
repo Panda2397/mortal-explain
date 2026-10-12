@@ -10,6 +10,7 @@ EOF
 WORKDIR /
 COPY Cargo.toml Cargo.lock .
 COPY libriichi libriichi
+COPY exe-wrapper exe-wrapper
 
 RUN cargo build -p libriichi --lib --release
 
