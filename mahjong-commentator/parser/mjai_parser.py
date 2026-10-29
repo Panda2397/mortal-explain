@@ -47,11 +47,19 @@ class MJAIParser:
         self.open_melds = 0
         self.turn = 0
 
+        oya = event["oya"]
+
+        winds = ["E", "S", "W", "N"]
+        jikaze = winds[(self.player_id - oya) % 4]
+
         self.round = {
             "bakaze": event.get("bakaze"),
+            "jikaze": jikaze,
             "kyoku": event.get("kyoku"),
             "honba": event.get("honba"),
             "scores": event.get("scores"),
+            "oya": oya,
+            "kyotaku": event.get("kyotaku"),
         }
 
         self.dora_indicators = []
@@ -76,6 +84,7 @@ class MJAIParser:
             )
 
         self.hand.append(tile)
+        self.drawn_tile = tile
 
     def process_discard(self, event: dict):
         """Capture a decision and then update the hand."""
@@ -96,6 +105,7 @@ class MJAIParser:
                 "visible_tiles": self.visible_tiles.copy(),
                 "open_melds": self.open_melds,
                 "dora_indicators": self.dora_indicators.copy(),
+                "drawn_tile": self.drawn_tile,
             }
 
             self.decisions.append(decision)

@@ -35,5 +35,33 @@ def main():
         print(result["best_evaluation"])
 
 
+
+
+
+    import json
+
+    output_path = (
+        Path(__file__).resolve().parent
+        / "data/processed/decisions.json"
+    )
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    evaluations = [
+        evaluate_decision(decision)
+        for decision in decisions
+    ]
+
+    with output_path.open("w", encoding="utf-8") as f:
+        json.dump(
+            evaluations,
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+    print(f"Saved {len(evaluations)} evaluations")
+
+
 if __name__ == "__main__":
     main()

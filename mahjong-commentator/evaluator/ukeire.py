@@ -1,4 +1,5 @@
 from collections import Counter
+from evaluator.shanten import index_to_tile
 
 from evaluator.shanten import (
     calculate_shanten,
@@ -6,24 +7,6 @@ from evaluator.shanten import (
 )
 
 
-def index_to_tile(index: int) -> str:
-    """
-    Convert 34-index representation back to MJAI tile.
-    Red fives are represented as normal fives.
-    """
-
-    if 0 <= index <= 8:
-        return f"{index + 1}m"
-
-    if 9 <= index <= 17:
-        return f"{index - 8}p"
-
-    if 18 <= index <= 26:
-        return f"{index - 17}s"
-
-    honors = ["E", "S", "W", "N", "P", "F", "C"]
-
-    return honors[index - 27]
 
 
 def calculate_ukeire(
