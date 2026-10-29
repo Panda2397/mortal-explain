@@ -1,0 +1,1164 @@
+{
+  "player": 0,
+  "round": {
+    "bakaze": "E",
+    "jikaze": "E",
+    "kyoku": 1,
+    "honba": 0,
+    "scores": [
+      25000,
+      25000,
+      25000,
+      25000
+    ],
+    "oya": 0,
+    "kyotaku": 0
+  },
+  "turn": 1,
+  "hand": [
+    "1m",
+    "2m",
+    "4m",
+    "1p",
+    "5s",
+    "6s",
+    "7s",
+    "8s",
+    "S",
+    "W",
+    "F",
+    "F",
+    "C",
+    "5mr"
+  ],
+  "visible_tiles": [
+    "3p"
+  ],
+  "open_melds": 0,
+  "dora_indicators": [
+    "3p"
+  ],
+  "actual_discard": "5mr",
+  "actual_evaluation": {
+    "discard": "5mr",
+    "shanten": 4,
+    "ukeire": 65,
+    "effective_tiles": {
+      "1m": 3,
+      "2m": 3,
+      "3m": 4,
+      "4m": 3,
+      "5m": 3,
+      "6m": 4,
+      "1p": 3,
+      "2p": 4,
+      "3p": 3,
+      "3s": 4,
+      "4s": 4,
+      "5s": 3,
+      "6s": 3,
+      "7s": 3,
+      "8s": 3,
+      "9s": 4,
+      "S": 3,
+      "W": 3,
+      "F": 2,
+      "C": 3
+    },
+    "blocks": [
+      {
+        "melds": [],
+        "taatsu": [
+          [
+            "1m",
+            "2m"
+          ],
+          [
+            "5s",
+            "6s"
+          ],
+          [
+            "7s",
+            "8s"
+          ]
+        ],
+        "pairs": [
+          [
+            "F",
+            "F"
+          ]
+        ],
+        "isolated": [
+          "4m",
+          "1p",
+          "S",
+          "W",
+          "C"
+        ],
+        "open_melds": 0,
+        "block_count": 4,
+        "structural_shanten": 4
+      }
+    ],
+    "discarded_tile_yaku_potential": {
+      "tile": "5mr",
+      "is_honor": false,
+      "is_yakuhai": false,
+      "yakuhai_reasons": [],
+      "potential_yakuhai_han": 0
+    },
+    "discarded_tile_dora": {
+      "tile": "5mr",
+      "is_aka_dora": true,
+      "is_indicator_dora": false,
+      "aka_dora_han": 1,
+      "indicator_dora_han": 0,
+      "potential_bonus_han": 1
+    }
+  },
+  "best_efficiency_discard": "S",
+  "best_evaluation": {
+    "discard": "S",
+    "shanten": 3,
+    "ukeire": 50,
+    "effective_tiles": {
+      "3m": 4,
+      "6m": 4,
+      "1p": 3,
+      "2p": 4,
+      "3p": 3,
+      "3s": 4,
+      "4s": 4,
+      "5s": 3,
+      "6s": 3,
+      "7s": 3,
+      "8s": 3,
+      "9s": 4,
+      "W": 3,
+      "F": 2,
+      "C": 3
+    },
+    "blocks": [
+      {
+        "melds": [],
+        "taatsu": [
+          [
+            "1m",
+            "2m"
+          ],
+          [
+            "4m",
+            "5m"
+          ],
+          [
+            "5s",
+            "6s"
+          ],
+          [
+            "7s",
+            "8s"
+          ]
+        ],
+        "pairs": [
+          [
+            "F",
+            "F"
+          ]
+        ],
+        "isolated": [
+          "1p",
+          "W",
+          "C"
+        ],
+        "open_melds": 0,
+        "block_count": 5,
+        "structural_shanten": 3
+      }
+    ],
+    "discarded_tile_yaku_potential": {
+      "tile": "S",
+      "name": "南風",
+      "is_honor": true,
+      "is_yakuhai": false,
+      "yakuhai_reasons": [],
+      "potential_yakuhai_han": 0
+    },
+    "discarded_tile_dora": {
+      "tile": "S",
+      "is_aka_dora": false,
+      "is_indicator_dora": false,
+      "aka_dora_han": 0,
+      "indicator_dora_han": 0,
+      "potential_bonus_han": 0
+    }
+  },
+  "equally_efficient_discards": [
+    "C",
+    "S",
+    "W"
+  ],
+  "actual_shanten_minus_alternative": 1,
+  "actual_ukeire_minus_alternative": 15,
+  "all_candidates": [
+    {
+      "discard": "C",
+      "shanten": 3,
+      "ukeire": 50,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1p",
+            "S",
+            "W"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 3
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "C",
+        "name": "紅中",
+        "is_honor": true,
+        "is_yakuhai": true,
+        "yakuhai_reasons": [
+          "dragon"
+        ],
+        "potential_yakuhai_han": 1
+      },
+      "discarded_tile_dora": {
+        "tile": "C",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "S",
+      "shanten": 3,
+      "ukeire": 50,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1p",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 3
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "S",
+        "name": "南風",
+        "is_honor": true,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "S",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "W",
+      "shanten": 3,
+      "ukeire": 50,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1p",
+            "S",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 3
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "W",
+        "name": "西風",
+        "is_honor": true,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "W",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "1p",
+      "shanten": 3,
+      "ukeire": 43,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 3
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1p",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1p",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "5s",
+      "shanten": 3,
+      "ukeire": 29,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [
+            [
+              "6s",
+              "7s",
+              "8s"
+            ]
+          ],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1p",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 3
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "5s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "5s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "8s",
+      "shanten": 3,
+      "ukeire": 29,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [
+            [
+              "5s",
+              "6s",
+              "7s"
+            ]
+          ],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1p",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 3
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "8s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "8s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "1m",
+      "shanten": 4,
+      "ukeire": 69,
+      "effective_tiles": {
+        "1m": 3,
+        "2m": 3,
+        "3m": 4,
+        "4m": 3,
+        "5m": 3,
+        "6m": 4,
+        "7m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "2m",
+              "4m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "5m",
+            "1p",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 4
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1m",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1m",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "5mr",
+      "shanten": 4,
+      "ukeire": 65,
+      "effective_tiles": {
+        "1m": 3,
+        "2m": 3,
+        "3m": 4,
+        "4m": 3,
+        "5m": 3,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "4m",
+            "1p",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 4
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "5mr",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "5mr",
+        "is_aka_dora": true,
+        "is_indicator_dora": false,
+        "aka_dora_han": 1,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 1
+      }
+    },
+    {
+      "discard": "4m",
+      "shanten": 4,
+      "ukeire": 63,
+      "effective_tiles": {
+        "3m": 4,
+        "4m": 3,
+        "5m": 3,
+        "6m": 4,
+        "7m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "5m",
+            "1p",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 4
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "4m",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "4m",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "2m",
+      "shanten": 4,
+      "ukeire": 59,
+      "effective_tiles": {
+        "1m": 3,
+        "2m": 3,
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1m",
+            "1p",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 4
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "2m",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "2m",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "6s",
+      "shanten": 4,
+      "ukeire": 53,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "7s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1p",
+            "8s",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 4
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "6s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "6s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "7s",
+      "shanten": 4,
+      "ukeire": 53,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "6s"
+            ]
+          ],
+          "pairs": [
+            [
+              "F",
+              "F"
+            ]
+          ],
+          "isolated": [
+            "1p",
+            "8s",
+            "S",
+            "W",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 4
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "7s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "7s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    {
+      "discard": "F",
+      "shanten": 4,
+      "ukeire": 53,
+      "effective_tiles": {
+        "3m": 4,
+        "6m": 4,
+        "1p": 3,
+        "2p": 4,
+        "3p": 3,
+        "3s": 4,
+        "4s": 4,
+        "5s": 3,
+        "6s": 3,
+        "7s": 3,
+        "8s": 3,
+        "9s": 4,
+        "S": 3,
+        "W": 3,
+        "F": 2,
+        "C": 3
+      },
+      "blocks": [
+        {
+          "melds": [],
+          "taatsu": [
+            [
+              "1m",
+              "2m"
+            ],
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "5s",
+              "6s"
+            ],
+            [
+              "7s",
+              "8s"
+            ]
+          ],
+          "pairs": [],
+          "isolated": [
+            "1p",
+            "S",
+            "W",
+            "F",
+            "C"
+          ],
+          "open_melds": 0,
+          "block_count": 4,
+          "structural_shanten": 4
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "F",
+        "name": "發財",
+        "is_honor": true,
+        "is_yakuhai": true,
+        "yakuhai_reasons": [
+          "dragon"
+        ],
+        "potential_yakuhai_han": 1
+      },
+      "discarded_tile_dora": {
+        "tile": "F",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    }
+  ]
+}
