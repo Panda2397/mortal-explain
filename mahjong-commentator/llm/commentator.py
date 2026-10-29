@@ -15,7 +15,7 @@ EXAMPLE_PATH = Path("data/examples/discard_example.json")
 class MahjongCommentator:
     def __init__(
         self,
-        model="qwen3:8b",
+        model="deepseek-r1:8b",
         use_few_shot=True,
     ):
         self.model = model
