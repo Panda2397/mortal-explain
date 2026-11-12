@@ -106,25 +106,40 @@ def calculate_shanten(
          ...
     """
 
+    return calculate_shanten_by_type(hand, open_melds)["minimum"]
+
+
+def calculate_shanten_by_type(
+    hand: list[str],
+    open_melds: int = 0,
+) -> dict:
+    """Return shanten independently for each legal winning shape.
+
+    ``calculate_shanten`` remains the compatibility API and returns the
+    minimum of these values.  Keeping the three values here prevents a
+    Chiitoitsu/Kokushi route from being silently discarded when it is not
+    the current minimum.
+    """
     tiles = hand_to_34(hand)
-
     calculator = Shanten()
+    regular = calculator.calculate_shanten_for_regular_hand(tiles)
 
-    # Standard hand
-    standard = calculator.calculate_shanten_for_regular_hand(
-        tiles
-    )
+    result = {
+        "regular": {"available": True, "shanten": regular},
+        "chiitoitsu": {"available": open_melds == 0,
+                        "shanten": None},
+        "kokushi": {"available": open_melds == 0,
+                     "shanten": None},
+    }
+    if open_melds == 0:
+        result["chiitoitsu"]["shanten"] = calculator.calculate_shanten_for_chiitoitsu_hand(tiles)
+        result["kokushi"]["shanten"] = calculator.calculate_shanten_for_kokushi_hand(tiles)
 
-    # Chiitoitsu and Kokushi require a closed hand
-    if open_melds > 0:
-        return standard
-
-    chiitoitsu = calculator.calculate_shanten_for_chiitoitsu_hand(
-        tiles
-    )
-
-    kokushi = calculator.calculate_shanten_for_kokushi_hand(
-        tiles
-    )
-
-    return min(standard, chiitoitsu, kokushi)
+    available = [result[name]["shanten"] for name in ("regular", "chiitoitsu", "kokushi")
+                 if result[name]["available"]]
+    minimum = min(available)
+    result["minimum"] = minimum
+    result["best_routes"] = [name for name, value in result.items()
+                              if name != "minimum" and value["available"]
+                              and value["shanten"] == minimum]
+    return result

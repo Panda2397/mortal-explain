@@ -89,9 +89,15 @@ The number of dora han that tile could provide
 if it formed a qualifying triplet or quad.
 
 blocks:
-A possible decomposition of the hand after
-discarding the candidate tile.
-The decomposition may not be unique or exhaustive.
+Possible decompositions of the hand after
+discarding the candidate tile.  Each decomposition
+has a ``route`` field: ``regular`` for the
+four-meld-one-pair shape or ``chiitoitsu`` for
+the seven-pairs shape.  Prefer the route whose
+``structural_shanten`` agrees with the top-level
+shanten and mention flexibility when multiple
+routes are present.  Do not describe a regular
+decomposition as the only interpretation.
 
 ## Ranking rules
 

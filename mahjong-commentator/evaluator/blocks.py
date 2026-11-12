@@ -2,6 +2,46 @@ from evaluator.shanten import hand_to_34, index_to_tile
 
 HONORS = ["E", "S", "W", "N", "P", "F", "C"]
 
+
+def analyze_chiitoitsu(hand: list[str], open_melds: int = 0) -> dict | None:
+    """Return the natural seven-pairs explanation for a closed hand.
+
+    This is deliberately separate from the regular four-meld decomposition:
+    a pair used by Chiitoitsu must remain a pair, rather than being consumed
+    as a regular-hand head or taatsu.
+    """
+    if open_melds > 0:
+        return None
+
+    counts = hand_to_34(hand)
+    pairs: list[list[str]] = []
+    singles: list[str] = []
+    distinct = 0
+
+    for i, count in enumerate(counts):
+        if count == 0:
+            continue
+        distinct += 1
+        if count >= 2:
+            pairs.append([index_to_tile(i)] * 2)
+            # A quad contributes one pair plus two unused copies in this
+            # explanatory representation.
+            singles.extend([index_to_tile(i)] * (count - 2))
+        else:
+            singles.append(index_to_tile(i))
+
+    shanten = 6 - len(pairs) + max(0, 7 - distinct)
+    return {
+        "route": "chiitoitsu",
+        "melds": [],
+        "taatsu": [],
+        "pairs": pairs,
+        "isolated": singles,
+        "open_melds": open_melds,
+        "block_count": len(pairs),
+        "structural_shanten": shanten,
+    }
+
 def analyze_blocks(
     hand: list[str],
     open_melds: int = 0,
@@ -38,6 +78,7 @@ def analyze_blocks(
 
         if i is None:
             decompositions.append({
+                "route": "regular",
                 "melds": [m.copy() for m in melds],
                 "taatsu": [t.copy() for t in taatsu],
                 "pairs": [p.copy() for p in pairs],
@@ -175,17 +216,32 @@ def analyze_blocks(
             len(decomposition["isolated"]),
         )
 
-    decompositions.sort(key=rank)
+    # Include the alternative winning route.  This must happen before
+    # truncation, otherwise a regular decomposition can hide a better
+    # Chiitoitsu explanation when max_results is 1.
+    chiitoi = analyze_chiitoitsu(hand, open_melds)
+    if chiitoi is not None:
+        decompositions.append(chiitoi)
+
+    decompositions.sort(key=lambda d: (
+        d.get("structural_shanten", rank(d)[0]),
+        *rank(d)[:3],
+    ))
 
     results = []
 
     for decomposition in decompositions[:max_results]:
-        shanten, neg_blocks, _ = rank(decomposition)
+        if decomposition.get("route") == "chiitoitsu":
+            shanten = decomposition["structural_shanten"]
+            block_count = decomposition["block_count"]
+        else:
+            shanten, neg_blocks, _ = rank(decomposition)
+            block_count = -neg_blocks
 
         results.append({
             **decomposition,
             "open_melds": open_melds,
-            "block_count": -neg_blocks,
+            "block_count": block_count,
             "structural_shanten": shanten,
         })
 

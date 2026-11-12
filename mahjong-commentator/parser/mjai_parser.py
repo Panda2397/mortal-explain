@@ -29,6 +29,7 @@ class MJAIParser:
         self.turn = 0
         self.round = None
         self.dora_indicators = []
+        self.drawn_tile = None
 
         self.decisions = []
 
@@ -99,13 +100,14 @@ class MJAIParser:
                 "player": self.player_id,
                 "round": self.round.copy() if self.round else None,
                 "turn": self.turn + 1,
+                "drawn_tile": self.drawn_tile,
                 "hand": self.hand.copy(),
                 "actual_discard": tile,
                 "tsumogiri": event.get("tsumogiri", False),
                 "visible_tiles": self.visible_tiles.copy(),
                 "open_melds": self.open_melds,
                 "dora_indicators": self.dora_indicators.copy(),
-                "drawn_tile": self.drawn_tile,
+                
             }
 
             self.decisions.append(decision)

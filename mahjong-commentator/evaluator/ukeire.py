@@ -2,7 +2,7 @@ from collections import Counter
 from evaluator.shanten import index_to_tile
 
 from evaluator.shanten import (
-    calculate_shanten,
+    calculate_shanten_by_type,
     tile_to_index,
 )
 
@@ -41,10 +41,8 @@ def calculate_ukeire(
     if visible_tiles is None:
         visible_tiles = []
 
-    current_shanten = calculate_shanten(
-        hand,
-        open_melds
-    )
+    route_state = calculate_shanten_by_type(hand, open_melds)
+    current_shanten = route_state["minimum"]
 
     # Count tiles known to be unavailable.
     # This includes our own hand and public visible tiles.
@@ -54,6 +52,7 @@ def calculate_ukeire(
         known_tiles[tile_to_index(tile)] += 1
 
     effective_tiles = {}
+    route_effective = {name: {} for name in ("regular", "chiitoitsu", "kokushi")}
 
     for index in range(34):
 
@@ -67,18 +66,30 @@ def calculate_ukeire(
         # Simulate drawing the tile
         new_hand = hand + [candidate]
 
-        new_shanten = calculate_shanten(
-            new_hand,
-            open_melds
-        )
+        new_state = calculate_shanten_by_type(new_hand, open_melds)
+        for route in route_effective:
+            before = route_state[route]
+            after = new_state[route]
+            if before["available"] and after["available"] and after["shanten"] < before["shanten"]:
+                route_effective[route][candidate] = remaining
 
-        if new_shanten < current_shanten:
+        if new_state["minimum"] < current_shanten:
             effective_tiles[candidate] = remaining
 
     return {
         "shanten": current_shanten,
         "ukeire": sum(effective_tiles.values()),
         "effective_tiles": effective_tiles,
+        "shanten_by_type": route_state,
+        "ukeire_by_type": {
+            route: {
+                "shanten": route_state[route]["shanten"],
+                "available": route_state[route]["available"],
+                "ukeire": sum(tiles.values()),
+                "effective_tiles": tiles,
+            }
+            for route, tiles in route_effective.items()
+        },
     }
 
 

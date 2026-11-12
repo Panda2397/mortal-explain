@@ -10,6 +10,7 @@ def prepare_llm_input(evaluation):
         "turn": evaluation["turn"],
         "round": evaluation.get("round"),
         "hand": evaluation.get("hand"),
+        "drawn_tile": evaluation.get("drawn_tile"),
         "dora_indicators": evaluation.get("dora_indicators"),
         "open_melds": evaluation.get("open_melds"),
         "blocks": evaluation.get("blocks"),

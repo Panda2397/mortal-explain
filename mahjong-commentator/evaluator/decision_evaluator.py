@@ -116,6 +116,7 @@ def evaluate_decision(decision: dict) -> dict:
         "turn": decision["turn"],
 
         # Preserve game state for future commentary.
+        "drawn_tile": decision["drawn_tile"],
         "hand": hand.copy(),
         "visible_tiles": visible_tiles.copy(),
         "open_melds": open_melds,

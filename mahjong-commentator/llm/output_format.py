@@ -1,36 +1,6 @@
 
 OUTPUT_FORMAT = """
 Write in Traditional Chinese (Hong Kong).
-Use exactly these four sections.
-
-### 1. 局面背景
-場風：
-自風：
-局數：
-本場：
-巡目：
-分數：
-手牌：
-摸牌：drawn_tile
-副露：
-牌型特徵：根據blocks解釋
-
-### 2. 棄牌決策
-實際棄牌：
-牌效推薦：
-推薦依據：根據blocks解釋
-
-### 3. 兩種棄牌分析
-**實際棄牌：[tile]**
-牌效結果：
-策略影響：根據blocks解釋
-
-**替代棄牌：[tile] Use equally_efficient_discards**
-牌效結果：
-策略影響：根據blocks解釋
-
-### 4. 綜合解釋
-[One short paragraph comparing both choices.]
 
 Rules:
 - Preserve the exact section order and field names.
@@ -66,4 +36,13 @@ EVIDENCE AND COMPARISON RULES:
    If multiple discards share the best score, report the tie.
 
 7. Do not claim that discard A will lose A's 打點 unless the evaluator can explain what 打點 hand value it exactly loses.
+
+8. Only tiles in hand may be described as current hand structure.
+Visible tiles are outside the hand and must not be described as the player's pair, triplet, or potential hand block.
+
+9. `drawn_tile` is a top-level field. If it is present, report its exact tile;
+if it is absent, write "未提供". Never infer a drawn tile.
+
+10. Only describe a pair when that exact tile occurs at least twice in the
+provided hand or in the selected Chiitoitsu block.
 """
