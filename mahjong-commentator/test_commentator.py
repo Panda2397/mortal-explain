@@ -41,9 +41,9 @@ def main():
     commentator = MahjongCommentator()
 
     # Test one decision first
-    for i in range(17,20):
+    for i in range(121,122):
         decision = decisions[i]
-
+        print(decision)
         evidence = prepare_llm_input(decision)
 
         commentary = commentator.generate(evidence)

@@ -41,6 +41,9 @@ def main() -> None:
                 "model": args.model,
                 "latency_ms": elapsed_ms,
                 "explanation_source": commentator.last_explanation_source,
+                "json_valid": commentator.last_parsed_response is not None,
+                "raw_response": commentator.last_raw_response,
+                "parsed_response": commentator.last_parsed_response,
                 "commentary": commentary,
             }
             output.write(json.dumps(record, ensure_ascii=False) + "\n")

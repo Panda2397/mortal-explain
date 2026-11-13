@@ -23,6 +23,32 @@ class MahjongCommentator:
         self.use_few_shot = use_few_shot
         self.client = Client(host="http://localhost:11434")
         self.last_explanation_source = "unknown"
+        self.last_raw_response = ""
+        self.last_parsed_response = None
+
+    @staticmethod
+    def comparison_evidence(decision: dict) -> tuple[str, list[str]]:
+        actual = decision["actual_evaluation"]
+        best = decision["best_evaluation"]
+        reasons = []
+        if best["shanten"] < actual["shanten"]:
+            comparison = "recommended_better"
+            reasons.append("RECOMMENDED_LOWER_SHANTEN")
+        elif best["shanten"] > actual["shanten"]:
+            comparison = "actual_better"
+            reasons.append("ACTUAL_LOWER_SHANTEN")
+        elif best["ukeire"] > actual["ukeire"]:
+            comparison = "recommended_better"
+            reasons.extend(["SAME_SHANTEN", "RECOMMENDED_HIGHER_UKEIRE"])
+        elif best["ukeire"] < actual["ukeire"]:
+            comparison = "actual_better"
+            reasons.extend(["SAME_SHANTEN", "ACTUAL_HIGHER_UKEIRE"])
+        else:
+            comparison = "equal"
+            reasons.extend(["SAME_SHANTEN", "SAME_UKEIRE"])
+        if decision["actual_discard"] == decision["best_efficiency_discard"]:
+            reasons.append("ACTUAL_EQUALS_RECOMMENDATION")
+        return comparison, reasons
 
     def build_evidence(self, decision: dict) -> dict:
         fields = [
@@ -58,35 +84,43 @@ class MahjongCommentator:
     def build_messages(self, decision: dict) -> list:
         messages = [{"role": "system", "content": SYSTEM_PROMPT}]
         actual_evidence = self.build_evidence(decision)
-        actual = actual_evidence["actual_evaluation"]
-        best = actual_evidence["best_evaluation"]
-        reasons = []
-        if best["shanten"] < actual["shanten"]:
-            reasons.append("RECOMMENDED_LOWER_SHANTEN")
-        elif best["shanten"] == actual["shanten"]:
-            reasons.append("SAME_SHANTEN")
-        if best["ukeire"] > actual["ukeire"]:
-            reasons.append("RECOMMENDED_HIGHER_UKEIRE")
-        elif best["ukeire"] == actual["ukeire"]:
-            reasons.append("SAME_UKEIRE")
-        if actual_evidence["actual_discard"] == actual_evidence["best_efficiency_discard"]:
-            reasons.append("ACTUAL_EQUALS_RECOMMENDATION")
+        expected_comparison, reasons = self.comparison_evidence(actual_evidence)
 
         messages.append({
             "role": "user",
             "content": (
-                "Generate only one short Traditional Chinese strategy paragraph. "
-                "Do not output headings, tiles, numbers, or background fields; "
-                "Python will render those from verified evidence. Paraphrase only "
-                "these evaluator reason codes: " + ", ".join(reasons) + ".\n\n"
-                + json.dumps(
-                    actual_evidence,
-                    ensure_ascii=False,
-                )
+                "Return JSON only. Explain the supplied verified conclusion. "
+                "Copy every allowed_reason_codes value exactly once into "
+                "reason_codes_used.\n\n"
+                + json.dumps({
+                    "expected_comparison": expected_comparison,
+                    "allowed_reason_codes": reasons,
+                }, ensure_ascii=False)
             ),
         })
 
         return messages
+
+    @staticmethod
+    def parse_llm_response(raw: str) -> dict | None:
+        try:
+            parsed = json.loads(raw)
+        except json.JSONDecodeError:
+            return None
+        required = {"comparison", "reason_codes_used", "explanation"}
+        if not isinstance(parsed, dict) or set(parsed) != required:
+            return None
+        if parsed["comparison"] not in {
+            "actual_better", "recommended_better", "equal"
+        }:
+            return None
+        if not isinstance(parsed["reason_codes_used"], list) or not all(
+            isinstance(code, str) for code in parsed["reason_codes_used"]
+        ):
+            return None
+        if not isinstance(parsed["explanation"], str):
+            return None
+        return parsed
 
     @staticmethod
     def _tiles(tiles: list[str]) -> str:
@@ -169,7 +203,7 @@ class MahjongCommentator:
 ### 3. 棄牌分析
 
 **實際棄牌：{actual_discard}**
-牌效結果：{actual['shanten']}向聽，入章數{actual['ukeire']}。
+牌效結果：{actual['shanten']}向聽，入章數{actual['ukeire']}；有效牌為{effective}。
 
 **替代棄牌**
 {alternative}
@@ -223,6 +257,7 @@ class MahjongCommentator:
         response = self.client.chat(
             model=self.model,
             messages=self.build_messages(decision),
+            format="json",
             options={
                 "temperature": 0,
                 "seed": 42,
@@ -231,4 +266,15 @@ class MahjongCommentator:
             think=True,
         )
 
-        return self.render_grounded_commentary(decision, response.message.content)
+        raw = response.message.content
+        parsed = self.parse_llm_response(raw)
+        self.last_raw_response = raw
+        self.last_parsed_response = parsed
+        expected_comparison, allowed_reasons = self.comparison_evidence(decision)
+        response_is_grounded = (
+            parsed is not None
+            and parsed["comparison"] == expected_comparison
+            and set(parsed["reason_codes_used"]) == set(allowed_reasons)
+        )
+        explanation = parsed["explanation"] if response_is_grounded else ""
+        return self.render_grounded_commentary(decision, explanation)

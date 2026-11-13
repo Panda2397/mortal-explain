@@ -5,9 +5,10 @@
 Evaluate whether generated commentary is factually grounded in the evaluator
 evidence before comparing writing style or model preference.
 
-The unit of evaluation is one decision. The LLM receives one compact decision
-record, and the metric record contains the same decision index, model name, and
-generated commentary.
+The unit of evaluation is one decision. Python converts evaluator output into
+an expected comparison and an allowed reason-code set. The LLM returns
+structured JSON plus a short explanation; Python then renders the factual
+four-section commentary.
 
 ## Dataset
 
@@ -16,6 +17,12 @@ Include regular, Chiitoitsu, and Kokushi routes; tied discards; supplied and
 missing draw tiles; visible honors not in the hand; and different shanten levels.
 Keep the indices in `data/metrics/gold_indices.json` so every model sees the
 same cases.
+
+The current 30-case pilot is stratified by comparison outcome and route: 15
+equal cases, 12 higher-recommended-ukeire cases, and all 3 available
+lower-recommended-shanten cases. The current source file contains no Kokushi,
+missing-draw, or actual-better examples, so final evaluation requires decisions
+from additional games for those categories.
 
 For each case, the evaluator evidence is authoritative. Human annotation is
 only needed for insights that cannot be checked mechanically, such as whether
@@ -26,7 +33,18 @@ the strategic explanation is clear.
 Store one JSON object per line in `data/metrics/predictions/<model>.jsonl`:
 
 ```json
-{"index": 19, "model": "model-name", "commentary": "..."}
+{
+  "index": 19,
+  "model": "model-name",
+  "raw_response": "{...}",
+  "parsed_response": {
+    "comparison": "recommended_better",
+    "reason_codes_used": ["SAME_SHANTEN", "RECOMMENDED_HIGHER_UKEIRE"],
+    "explanation": "..."
+  },
+  "explanation_source": "llm",
+  "commentary": "..."
+}
 ```
 
 The index must identify the source decision. Do not evaluate a commentary file
@@ -34,7 +52,16 @@ without its source index.
 
 ## Automatic metrics
 
-The first implementation checks:
+Model-level checks used to distinguish models:
+
+1. JSON validity and exact schema compliance.
+2. Comparison accuracy against evaluator-derived gold.
+3. Reason-code precision and recall.
+4. Explanation compliance: non-empty prose without protected numeric/tile
+   facts that should be rendered by Python.
+5. LLM explanation acceptance versus deterministic fallback rate.
+
+System-level checks used to verify the final pipeline:
 
 1. Format compliance: all four required headings occur in the required order.
 2. Hand fidelity: every claimed hand tile must be present in the source hand;
@@ -47,8 +74,10 @@ The first implementation checks:
 6. Effective-tile fidelity: effective tile names must come from the selected
    route's effective-tile set.
 
-These checks produce per-case `0/1` values and an error list. They are evidence
-checks, not a complete language understanding metric.
+Most checks produce per-case `0/1` values and an error list; reason-code
+precision and recall are fractional. System-level checks can remain perfect
+because verified facts are rendered deterministically. Model selection should
+therefore use the model-level results, latency, and blinded human assessment.
 
 ## Human metrics
 
@@ -102,4 +131,3 @@ python -m evaluator.metrics `
 
 The command prints per-case failures and aggregate automatic metrics. Human
 metrics are entered separately after annotation.
-
