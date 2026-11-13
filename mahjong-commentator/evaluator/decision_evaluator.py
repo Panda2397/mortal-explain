@@ -4,6 +4,7 @@ from evaluator.shanten import tile_to_index
 from evaluator.blocks import analyze_blocks
 from evaluator.yaku import analyze_honor_tile
 from evaluator.dora import analyze_discard_dora
+from copy import deepcopy
 
 def candidate_rank(result):
     yaku = result["discarded_tile_yaku_potential"]
@@ -35,7 +36,14 @@ def evaluate_decision(decision: dict) -> dict:
 
     hand = decision["hand"]
     visible_tiles = decision["visible_tiles"]
-    open_melds = decision["open_melds"]
+    raw_open_melds = decision.get("open_melds", [])
+    if isinstance(raw_open_melds, list):
+        open_melds = deepcopy(raw_open_melds)
+        open_meld_count = decision.get("open_meld_count", len(open_melds))
+    else:
+        # Compatibility with older processed/custom fixtures.
+        open_melds = []
+        open_meld_count = decision.get("open_meld_count", int(raw_open_melds))
 
     round_info = decision.get("round") or {}
     bakaze = round_info["bakaze"]
@@ -44,7 +52,7 @@ def evaluate_decision(decision: dict) -> dict:
     results = evaluate_discards(
         hand=hand,
         visible_tiles=visible_tiles,
-        open_melds=open_melds,
+        open_melds=open_meld_count,
     )
 
     # Enrich each candidate with structural and yaku evidence.
@@ -56,7 +64,7 @@ def evaluate_decision(decision: dict) -> dict:
 
         result["blocks"] = analyze_blocks(
             hand=remaining_hand,
-            open_melds=open_melds,
+            open_melds=open_meld_count,
             max_results=1,
         )
 
@@ -120,6 +128,7 @@ def evaluate_decision(decision: dict) -> dict:
         "hand": hand.copy(),
         "visible_tiles": visible_tiles.copy(),
         "open_melds": open_melds,
+        "open_meld_count": open_meld_count,
         "dora_indicators": decision.get(
             "dora_indicators", []
         ),

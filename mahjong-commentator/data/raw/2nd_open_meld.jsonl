@@ -1,0 +1,34 @@
+{"type": "start_game"}
+{"type": "start_kyoku", "bakaze": "E", "kyoku": 1, "honba": 0, "kyotaku": 0, "oya": 0, "scores": [25000, 25000, 25000, 25000], "dora_marker": "3p", "tehais": [["1s", "1s", "1s", "2s", "2s", "2s", "4p", "4p", "5p", "5p", "9p", "9p", "1s"], ["2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "9p", "N", "W", "E", "S"], ["N", "N", "E", "E", "S", "S", "W", "W", "P", "P", "C", "C", "S"], ["F", "F", "F", "9m", "9m", "3p", "4p", "5p", "6p", "7p", "1m", "1m", "2m"]]}
+{"type": "tsumo", "actor": 0, "pai": "F"}
+{"type": "dahai", "actor": 0, "pai": "F", "tsumogiri": true}
+{"type": "tsumo", "actor": 1, "pai": "2p"}
+{"type": "dahai", "actor": 1, "pai": "N", "tsumogiri": false}
+{"type": "tsumo", "actor": 2, "pai": "C"}
+{"type": "dahai", "actor": 2, "pai": "C", "tsumogiri": false}
+{"type": "tsumo", "actor": 3, "pai": "1m"}
+{"type": "dahai", "actor": 3, "pai": "4p", "tsumogiri": false}
+{"type": "pon", "actor": 0, "target": 3, "pai": "4p", "consumed": ["4p", "4p"]}
+{"type": "dahai", "actor": 0, "pai": "5p", "tsumogiri": false}
+{"type": "tsumo", "actor": 1, "pai": "3m"}
+{"type": "dahai", "actor": 1, "pai": "3m", "tsumogiri": true}
+{"type": "tsumo", "actor": 2, "pai": "P"}
+{"type": "dahai", "actor": 2, "pai": "P", "tsumogiri": true}
+{"type": "tsumo", "actor": 3, "pai": "3p"}
+{"type": "dahai", "actor": 3, "pai": "3p", "tsumogiri": true}
+{"type": "tsumo", "actor": 0, "pai": "9p"}
+{"type": "ankan", "actor": 0, "consumed": ["1s", "1s", "1s", "1s"]}
+{"type": "dora", "dora_marker": "9p"}
+{"type": "tsumo", "actor": 0, "pai": "E"}
+{"type": "dahai", "actor": 0, "pai": "E", "tsumogiri": true}
+{"type": "tsumo", "actor": 1, "pai": "W"}
+{"type": "dahai", "actor": 1, "pai": "W", "tsumogiri": true}
+{"type": "tsumo", "actor": 2, "pai": "2s"}
+{"type": "dahai", "actor": 2, "pai": "2s", "tsumogiri": true}
+{"type": "daiminkan", "actor": 0, "target": 2, "pai": "2s", "consumed": ["2s", "2s", "2s"]}
+{"type": "tsumo", "actor": 0, "pai": "4p"}
+{"type": "dahai", "actor": 0, "pai": "4p", "tsumogiri": true}
+{"type": "tsumo", "actor": 1, "pai": "5p"}
+{"type": "dahai", "actor": 1, "pai": "5p", "tsumogiri": true}
+{"type": "hora", "actor": 0, "target": 1, "deltas": [7700, -7700, 0, 0], "ura_markers": ["5m"]}
+{"type": "end_kyoku"}

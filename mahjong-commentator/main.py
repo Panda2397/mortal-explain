@@ -8,10 +8,35 @@ from parser.mjai_parser import (
 from evaluator.decision_evaluator import evaluate_decision
 
 
+def ask_data_path(prompt, default, *, must_exist=False):
+    """Ask for a path and keep it inside this project's data directory."""
+    data_dir = (Path(__file__).resolve().parent / "data").resolve()
+    while True:
+        raw = input(f"{prompt} [{default}]: ").strip() or default
+        entered = Path(raw)
+        if entered.parts and entered.parts[0].lower() == "data":
+            entered = Path(*entered.parts[1:])
+        path = (data_dir / entered).resolve()
+        try:
+            path.relative_to(data_dir)
+        except ValueError:
+            print("Path must be inside the project's data/ directory.")
+            continue
+        if must_exist and not path.is_file():
+            print(f"Input log does not exist: {path}")
+            continue
+        return path
+
+
 def main():
-    log_path = (
-        Path(__file__).resolve().parent
-        / "data/raw/game_001.json"
+    log_path = ask_data_path(
+        "Input MJAI log path under data/",
+        "raw/game_001.json",
+        must_exist=True,
+    )
+    output_path = ask_data_path(
+        "Output evaluation path under data/",
+        "processed/decisions.json",
     )
 
     events = load_mjai_log(log_path)
@@ -33,17 +58,7 @@ def main():
 
         print("\nBest evaluation:")
         print(result["best_evaluation"])
-
-
-
-
-
     import json
-
-    output_path = (
-        Path(__file__).resolve().parent
-        / "data/processed/decisions.json"
-    )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -60,7 +75,7 @@ def main():
             indent=2,
         )
 
-    print(f"Saved {len(evaluations)} evaluations")
+    print(f"Saved {len(evaluations)} evaluations to {output_path}")
 
 
 if __name__ == "__main__":

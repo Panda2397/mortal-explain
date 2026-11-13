@@ -1,0 +1,7698 @@
+[
+  {
+    "player": 0,
+    "round": {
+      "bakaze": "E",
+      "jikaze": "E",
+      "kyoku": 1,
+      "honba": 0,
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "oya": 0,
+      "kyotaku": 0
+    },
+    "turn": 1,
+    "drawn_tile": "1m",
+    "hand": [
+      "2m",
+      "3m",
+      "4m",
+      "4m",
+      "5m",
+      "7m",
+      "8m",
+      "9m",
+      "1s",
+      "1s",
+      "2s",
+      "3s",
+      "5s",
+      "1m"
+    ],
+    "visible_tiles": [
+      "5p"
+    ],
+    "open_melds": [],
+    "open_meld_count": 0,
+    "dora_indicators": [
+      "5p"
+    ],
+    "actual_discard": "1m",
+    "actual_evaluation": {
+      "discard": "1m",
+      "shanten": 1,
+      "ukeire": 16,
+      "effective_tiles": {
+        "3m": 3,
+        "6m": 4,
+        "1s": 2,
+        "4s": 4,
+        "5s": 3
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 1
+        },
+        "chiitoitsu": {
+          "available": true,
+          "shanten": 4
+        },
+        "kokushi": {
+          "available": true,
+          "shanten": 10
+        },
+        "minimum": 1,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 1,
+          "available": true,
+          "ukeire": 16,
+          "effective_tiles": {
+            "3m": 3,
+            "6m": 4,
+            "1s": 2,
+            "4s": 4,
+            "5s": 3
+          }
+        },
+        "chiitoitsu": {
+          "shanten": 4,
+          "available": true,
+          "ukeire": 27,
+          "effective_tiles": {
+            "2m": 3,
+            "3m": 3,
+            "5m": 3,
+            "7m": 3,
+            "8m": 3,
+            "9m": 3,
+            "2s": 3,
+            "3s": 3,
+            "5s": 3
+          }
+        },
+        "kokushi": {
+          "shanten": 10,
+          "available": true,
+          "ukeire": 43,
+          "effective_tiles": {
+            "1m": 3,
+            "1p": 4,
+            "9p": 4,
+            "9s": 4,
+            "E": 4,
+            "S": 4,
+            "W": 4,
+            "N": 4,
+            "P": 4,
+            "F": 4,
+            "C": 4
+          }
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ],
+            [
+              "7m",
+              "8m",
+              "9m"
+            ]
+          ],
+          "taatsu": [
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "2s",
+              "3s"
+            ]
+          ],
+          "pairs": [
+            [
+              "1s",
+              "1s"
+            ]
+          ],
+          "isolated": [
+            "5s"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 1
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1m",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1m",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "best_efficiency_discard": "1s",
+    "best_evaluation": {
+      "discard": "1s",
+      "shanten": 1,
+      "ukeire": 36,
+      "effective_tiles": {
+        "1m": 3,
+        "3m": 3,
+        "4m": 2,
+        "5m": 3,
+        "6m": 4,
+        "7m": 3,
+        "3s": 3,
+        "4s": 4,
+        "5s": 3,
+        "6s": 4,
+        "7s": 4
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 1
+        },
+        "chiitoitsu": {
+          "available": true,
+          "shanten": 5
+        },
+        "kokushi": {
+          "available": true,
+          "shanten": 10
+        },
+        "minimum": 1,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 1,
+          "available": true,
+          "ukeire": 36,
+          "effective_tiles": {
+            "1m": 3,
+            "3m": 3,
+            "4m": 2,
+            "5m": 3,
+            "6m": 4,
+            "7m": 3,
+            "3s": 3,
+            "4s": 4,
+            "5s": 3,
+            "6s": 4,
+            "7s": 4
+          }
+        },
+        "chiitoitsu": {
+          "shanten": 5,
+          "available": true,
+          "ukeire": 32,
+          "effective_tiles": {
+            "1m": 3,
+            "2m": 3,
+            "3m": 3,
+            "5m": 3,
+            "7m": 3,
+            "8m": 3,
+            "9m": 3,
+            "1s": 2,
+            "2s": 3,
+            "3s": 3,
+            "5s": 3
+          }
+        },
+        "kokushi": {
+          "shanten": 10,
+          "available": true,
+          "ukeire": 48,
+          "effective_tiles": {
+            "1m": 3,
+            "9m": 3,
+            "1p": 4,
+            "9p": 4,
+            "1s": 2,
+            "9s": 4,
+            "E": 4,
+            "S": 4,
+            "W": 4,
+            "N": 4,
+            "P": 4,
+            "F": 4,
+            "C": 4
+          }
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "1m",
+              "2m",
+              "3m"
+            ],
+            [
+              "1s",
+              "2s",
+              "3s"
+            ]
+          ],
+          "taatsu": [
+            [
+              "5m",
+              "7m"
+            ],
+            [
+              "8m",
+              "9m"
+            ]
+          ],
+          "pairs": [
+            [
+              "4m",
+              "4m"
+            ]
+          ],
+          "isolated": [
+            "5s"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 1
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "equally_efficient_discards": [
+      "1s"
+    ],
+    "actual_shanten_minus_alternative": 0,
+    "actual_ukeire_minus_alternative": -20,
+    "all_candidates": [
+      {
+        "discard": "1s",
+        "shanten": 1,
+        "ukeire": 36,
+        "effective_tiles": {
+          "1m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 5
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 36,
+            "effective_tiles": {
+              "1m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 5,
+            "available": true,
+            "ukeire": 32,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 48,
+            "effective_tiles": {
+              "1m": 3,
+              "9m": 3,
+              "1p": 4,
+              "9p": 4,
+              "1s": 2,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ],
+              [
+                "1s",
+                "2s",
+                "3s"
+              ]
+            ],
+            "taatsu": [
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "8m",
+                "9m"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "1s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "1s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "5s",
+        "shanten": 1,
+        "ukeire": 30,
+        "effective_tiles": {
+          "1m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 30,
+            "effective_tiles": {
+              "1m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ],
+              [
+                "1s",
+                "2s",
+                "3s"
+              ]
+            ],
+            "taatsu": [
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "8m",
+                "9m"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ]
+            ],
+            "isolated": [
+              "1s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "5s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "5s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "5m",
+        "shanten": 1,
+        "ukeire": 25,
+        "effective_tiles": {
+          "4m": 2,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 25,
+            "effective_tiles": {
+              "4m": 2,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ],
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "5m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "5m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "1m",
+        "shanten": 1,
+        "ukeire": 16,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 16,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "1m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "1m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "4m",
+        "shanten": 1,
+        "ukeire": 16,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 5
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 16,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 5,
+            "available": true,
+            "ukeire": 32,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "4m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "4m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2s",
+        "shanten": 1,
+        "ukeire": 15,
+        "effective_tiles": {
+          "3m": 3,
+          "4m": 2,
+          "6m": 4,
+          "1s": 2,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 15,
+            "effective_tiles": {
+              "3m": 3,
+              "4m": 2,
+              "6m": 4,
+              "1s": 2,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "3s",
+                "5s"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ],
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5m"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "8m",
+        "shanten": 2,
+        "ukeire": 47,
+        "effective_tiles": {
+          "1m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "8m": 3,
+          "9m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 47,
+            "effective_tiles": {
+              "1m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ],
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "9m",
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "8m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "8m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "9m",
+        "shanten": 2,
+        "ukeire": 47,
+        "effective_tiles": {
+          "1m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "8m": 3,
+          "9m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 47,
+            "effective_tiles": {
+              "1m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "9m": 3,
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ],
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "8m",
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "9m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "9m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2m",
+        "shanten": 2,
+        "ukeire": 44,
+        "effective_tiles": {
+          "1m": 3,
+          "2m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 44,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1s",
+                "2s",
+                "3s"
+              ]
+            ],
+            "taatsu": [
+              [
+                "1m",
+                "3m"
+              ],
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "8m",
+                "9m"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ]
+            ],
+            "isolated": [
+              "1s",
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3s",
+        "shanten": 2,
+        "ukeire": 44,
+        "effective_tiles": {
+          "1m": 3,
+          "2m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 44,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "8m",
+                "9m"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ],
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "2s",
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3m",
+        "shanten": 2,
+        "ukeire": 41,
+        "effective_tiles": {
+          "1m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 41,
+            "effective_tiles": {
+              "1m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1s",
+                "2s",
+                "3s"
+              ]
+            ],
+            "taatsu": [
+              [
+                "1m",
+                "2m"
+              ],
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "8m",
+                "9m"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ]
+            ],
+            "isolated": [
+              "1s",
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "7m",
+        "shanten": 2,
+        "ukeire": 41,
+        "effective_tiles": {
+          "1m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 41,
+            "effective_tiles": {
+              "1m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1p": 4,
+              "9p": 4,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "2m",
+                "3m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "8m",
+                "9m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ],
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5m",
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "7m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "7m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      }
+    ]
+  },
+  {
+    "player": 0,
+    "round": {
+      "bakaze": "E",
+      "jikaze": "E",
+      "kyoku": 1,
+      "honba": 0,
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "oya": 0,
+      "kyotaku": 0
+    },
+    "turn": 2,
+    "drawn_tile": "W",
+    "hand": [
+      "2m",
+      "3m",
+      "4m",
+      "4m",
+      "5m",
+      "7m",
+      "8m",
+      "9m",
+      "1s",
+      "1s",
+      "2s",
+      "3s",
+      "5s",
+      "W"
+    ],
+    "visible_tiles": [
+      "5p",
+      "1m",
+      "8p",
+      "9p",
+      "F"
+    ],
+    "open_melds": [],
+    "open_meld_count": 0,
+    "dora_indicators": [
+      "5p"
+    ],
+    "actual_discard": "W",
+    "actual_evaluation": {
+      "discard": "W",
+      "shanten": 1,
+      "ukeire": 16,
+      "effective_tiles": {
+        "3m": 3,
+        "6m": 4,
+        "1s": 2,
+        "4s": 4,
+        "5s": 3
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 1
+        },
+        "chiitoitsu": {
+          "available": true,
+          "shanten": 4
+        },
+        "kokushi": {
+          "available": true,
+          "shanten": 10
+        },
+        "minimum": 1,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 1,
+          "available": true,
+          "ukeire": 16,
+          "effective_tiles": {
+            "3m": 3,
+            "6m": 4,
+            "1s": 2,
+            "4s": 4,
+            "5s": 3
+          }
+        },
+        "chiitoitsu": {
+          "shanten": 4,
+          "available": true,
+          "ukeire": 27,
+          "effective_tiles": {
+            "2m": 3,
+            "3m": 3,
+            "5m": 3,
+            "7m": 3,
+            "8m": 3,
+            "9m": 3,
+            "2s": 3,
+            "3s": 3,
+            "5s": 3
+          }
+        },
+        "kokushi": {
+          "shanten": 10,
+          "available": true,
+          "ukeire": 40,
+          "effective_tiles": {
+            "1m": 3,
+            "1p": 4,
+            "9p": 3,
+            "9s": 4,
+            "E": 4,
+            "S": 4,
+            "W": 3,
+            "N": 4,
+            "P": 4,
+            "F": 3,
+            "C": 4
+          }
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ],
+            [
+              "7m",
+              "8m",
+              "9m"
+            ]
+          ],
+          "taatsu": [
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "2s",
+              "3s"
+            ]
+          ],
+          "pairs": [
+            [
+              "1s",
+              "1s"
+            ]
+          ],
+          "isolated": [
+            "5s"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 1
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "W",
+        "name": "西風",
+        "is_honor": true,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "W",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "best_efficiency_discard": "5s",
+    "best_evaluation": {
+      "discard": "5s",
+      "shanten": 1,
+      "ukeire": 16,
+      "effective_tiles": {
+        "3m": 3,
+        "6m": 4,
+        "1s": 2,
+        "4s": 4,
+        "W": 3
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 1
+        },
+        "chiitoitsu": {
+          "available": true,
+          "shanten": 4
+        },
+        "kokushi": {
+          "available": true,
+          "shanten": 9
+        },
+        "minimum": 1,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 1,
+          "available": true,
+          "ukeire": 16,
+          "effective_tiles": {
+            "3m": 3,
+            "6m": 4,
+            "1s": 2,
+            "4s": 4,
+            "W": 3
+          }
+        },
+        "chiitoitsu": {
+          "shanten": 4,
+          "available": true,
+          "ukeire": 27,
+          "effective_tiles": {
+            "2m": 3,
+            "3m": 3,
+            "5m": 3,
+            "7m": 3,
+            "8m": 3,
+            "9m": 3,
+            "2s": 3,
+            "3s": 3,
+            "W": 3
+          }
+        },
+        "kokushi": {
+          "shanten": 9,
+          "available": true,
+          "ukeire": 37,
+          "effective_tiles": {
+            "1m": 3,
+            "1p": 4,
+            "9p": 3,
+            "9s": 4,
+            "E": 4,
+            "S": 4,
+            "N": 4,
+            "P": 4,
+            "F": 3,
+            "C": 4
+          }
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ],
+            [
+              "7m",
+              "8m",
+              "9m"
+            ]
+          ],
+          "taatsu": [
+            [
+              "4m",
+              "5m"
+            ],
+            [
+              "2s",
+              "3s"
+            ]
+          ],
+          "pairs": [
+            [
+              "1s",
+              "1s"
+            ]
+          ],
+          "isolated": [
+            "W"
+          ],
+          "open_melds": 0,
+          "block_count": 5,
+          "structural_shanten": 1
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "5s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "5s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "equally_efficient_discards": [
+      "5s",
+      "W"
+    ],
+    "actual_shanten_minus_alternative": 0,
+    "actual_ukeire_minus_alternative": 0,
+    "all_candidates": [
+      {
+        "discard": "5s",
+        "shanten": 1,
+        "ukeire": 16,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "1s": 2,
+          "4s": 4,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 16,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "1s": 2,
+              "4s": 4,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "5s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "5s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "W",
+        "shanten": 1,
+        "ukeire": 16,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 16,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 3,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "W",
+          "name": "西風",
+          "is_honor": true,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "W",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "1s",
+        "shanten": 1,
+        "ukeire": 13,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "5s": 3,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 5
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 13,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 5,
+            "available": true,
+            "ukeire": 32,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 45,
+            "effective_tiles": {
+              "1m": 3,
+              "9m": 3,
+              "1p": 4,
+              "9p": 3,
+              "1s": 2,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "W": 3,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ],
+              [
+                "1s",
+                "2s",
+                "3s"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ]
+            ],
+            "pairs": [],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "1s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "1s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2s",
+        "shanten": 1,
+        "ukeire": 11,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 11,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "3s",
+                "5s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "4m",
+        "shanten": 2,
+        "ukeire": 47,
+        "effective_tiles": {
+          "1m": 3,
+          "2m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "7m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 5
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 47,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "7m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 5,
+            "available": true,
+            "ukeire": 32,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "5m",
+                "7m"
+              ],
+              [
+                "8m",
+                "9m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "4m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "4m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "5m",
+        "shanten": 2,
+        "ukeire": 44,
+        "effective_tiles": {
+          "1m": 3,
+          "2m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 44,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "2m",
+                "3m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "4m",
+                "4m"
+              ],
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "5m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "5m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2m",
+        "shanten": 2,
+        "ukeire": 41,
+        "effective_tiles": {
+          "2m": 3,
+          "3m": 3,
+          "4m": 2,
+          "5m": 3,
+          "6m": 4,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 41,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "4m": 2,
+              "5m": 3,
+              "6m": 4,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "3m",
+                "4m"
+              ],
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3s",
+        "shanten": 2,
+        "ukeire": 33,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 33,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "2s",
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 4,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "7m",
+        "shanten": 2,
+        "ukeire": 22,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "7m": 3,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 22,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "7m": 3,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "8m",
+                "9m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "7m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "7m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "8m",
+        "shanten": 2,
+        "ukeire": 22,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "8m": 3,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 22,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "8m": 3,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "7m",
+                "9m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "8m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "8m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "9m",
+        "shanten": 2,
+        "ukeire": 22,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "9m": 3,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 22,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "9m": 3,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 40,
+            "effective_tiles": {
+              "1m": 3,
+              "9m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "7m",
+                "8m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "9m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "9m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3m",
+        "shanten": 2,
+        "ukeire": 19,
+        "effective_tiles": {
+          "3m": 3,
+          "6m": 4,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3,
+          "W": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 4
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 9
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 19,
+            "effective_tiles": {
+              "3m": 3,
+              "6m": 4,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 4,
+            "available": true,
+            "ukeire": 27,
+            "effective_tiles": {
+              "2m": 3,
+              "5m": 3,
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "2s": 3,
+              "3s": 3,
+              "5s": 3,
+              "W": 3
+            }
+          },
+          "kokushi": {
+            "shanten": 9,
+            "available": true,
+            "ukeire": 37,
+            "effective_tiles": {
+              "1m": 3,
+              "1p": 4,
+              "9p": 3,
+              "9s": 4,
+              "E": 4,
+              "S": 4,
+              "N": 4,
+              "P": 4,
+              "F": 3,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "2m",
+                "4m"
+              ],
+              [
+                "4m",
+                "5m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s",
+              "W"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      }
+    ]
+  },
+  {
+    "player": 0,
+    "round": {
+      "bakaze": "E",
+      "jikaze": "E",
+      "kyoku": 1,
+      "honba": 0,
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "oya": 0,
+      "kyotaku": 0
+    },
+    "turn": 3,
+    "drawn_tile": "W",
+    "hand": [
+      "2m",
+      "3m",
+      "4m",
+      "7m",
+      "8m",
+      "9m",
+      "1s",
+      "1s",
+      "2s",
+      "3s",
+      "5s"
+    ],
+    "visible_tiles": [
+      "5p",
+      "1m",
+      "8p",
+      "9p",
+      "F",
+      "W",
+      "C",
+      "9p",
+      "3m",
+      "4m",
+      "5m"
+    ],
+    "open_melds": [
+      {
+        "type": "chi",
+        "tiles": [
+          "4m",
+          "5m",
+          "3m"
+        ],
+        "consumed": [
+          "4m",
+          "5m"
+        ],
+        "called_tile": "3m",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      }
+    ],
+    "open_meld_count": 1,
+    "dora_indicators": [
+      "5p"
+    ],
+    "actual_discard": "5s",
+    "actual_evaluation": {
+      "discard": "5s",
+      "shanten": 0,
+      "ukeire": 6,
+      "effective_tiles": {
+        "1s": 2,
+        "4s": 4
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 6,
+          "effective_tiles": {
+            "1s": 2,
+            "4s": 4
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ],
+            [
+              "7m",
+              "8m",
+              "9m"
+            ]
+          ],
+          "taatsu": [
+            [
+              "2s",
+              "3s"
+            ]
+          ],
+          "pairs": [
+            [
+              "1s",
+              "1s"
+            ]
+          ],
+          "isolated": [],
+          "open_melds": 1,
+          "block_count": 5,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "5s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "5s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "best_efficiency_discard": "5s",
+    "best_evaluation": {
+      "discard": "5s",
+      "shanten": 0,
+      "ukeire": 6,
+      "effective_tiles": {
+        "1s": 2,
+        "4s": 4
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 6,
+          "effective_tiles": {
+            "1s": 2,
+            "4s": 4
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ],
+            [
+              "7m",
+              "8m",
+              "9m"
+            ]
+          ],
+          "taatsu": [
+            [
+              "2s",
+              "3s"
+            ]
+          ],
+          "pairs": [
+            [
+              "1s",
+              "1s"
+            ]
+          ],
+          "isolated": [],
+          "open_melds": 1,
+          "block_count": 5,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "5s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "5s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "equally_efficient_discards": [
+      "5s"
+    ],
+    "actual_shanten_minus_alternative": 0,
+    "actual_ukeire_minus_alternative": 0,
+    "all_candidates": [
+      {
+        "discard": "5s",
+        "shanten": 0,
+        "ukeire": 6,
+        "effective_tiles": {
+          "1s": 2,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 6,
+            "effective_tiles": {
+              "1s": 2,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "5s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "5s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2s",
+        "shanten": 0,
+        "ukeire": 4,
+        "effective_tiles": {
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 4,
+            "effective_tiles": {
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "3s",
+                "5s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "1s",
+        "shanten": 0,
+        "ukeire": 3,
+        "effective_tiles": {
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 3,
+            "effective_tiles": {
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ],
+              [
+                "1s",
+                "2s",
+                "3s"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 4,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "1s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "1s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3s",
+        "shanten": 1,
+        "ukeire": 23,
+        "effective_tiles": {
+          "1s": 2,
+          "2s": 3,
+          "3s": 3,
+          "4s": 4,
+          "5s": 3,
+          "6s": 4,
+          "7s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 23,
+            "effective_tiles": {
+              "1s": 2,
+              "2s": 3,
+              "3s": 3,
+              "4s": 4,
+              "5s": 3,
+              "6s": 4,
+              "7s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "2s",
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "9m",
+        "shanten": 1,
+        "ukeire": 16,
+        "effective_tiles": {
+          "6m": 4,
+          "9m": 3,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 16,
+            "effective_tiles": {
+              "6m": 4,
+              "9m": 3,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "7m",
+                "8m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "9m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "9m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2m",
+        "shanten": 1,
+        "ukeire": 15,
+        "effective_tiles": {
+          "2m": 3,
+          "5m": 3,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 15,
+            "effective_tiles": {
+              "2m": 3,
+              "5m": 3,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "3m",
+                "4m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "4m",
+        "shanten": 1,
+        "ukeire": 14,
+        "effective_tiles": {
+          "1m": 3,
+          "4m": 2,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 14,
+            "effective_tiles": {
+              "1m": 3,
+              "4m": 2,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "2m",
+                "3m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "4m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "4m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "7m",
+        "shanten": 1,
+        "ukeire": 12,
+        "effective_tiles": {
+          "7m": 3,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 12,
+            "effective_tiles": {
+              "7m": 3,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "8m",
+                "9m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "7m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "7m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "8m",
+        "shanten": 1,
+        "ukeire": 12,
+        "effective_tiles": {
+          "8m": 3,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 12,
+            "effective_tiles": {
+              "8m": 3,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "7m",
+                "9m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "8m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "8m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3m",
+        "shanten": 1,
+        "ukeire": 11,
+        "effective_tiles": {
+          "3m": 2,
+          "1s": 2,
+          "4s": 4,
+          "5s": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 11,
+            "effective_tiles": {
+              "3m": 2,
+              "1s": 2,
+              "4s": 4,
+              "5s": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "7m",
+                "8m",
+                "9m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "2m",
+                "4m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "5s"
+            ],
+            "open_melds": 1,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      }
+    ]
+  },
+  {
+    "player": 0,
+    "round": {
+      "bakaze": "E",
+      "jikaze": "E",
+      "kyoku": 1,
+      "honba": 0,
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "oya": 0,
+      "kyotaku": 0
+    },
+    "turn": 4,
+    "drawn_tile": "W",
+    "hand": [
+      "2m",
+      "3m",
+      "4m",
+      "9m",
+      "1s",
+      "1s",
+      "2s",
+      "3s"
+    ],
+    "visible_tiles": [
+      "5p",
+      "1m",
+      "8p",
+      "9p",
+      "F",
+      "W",
+      "C",
+      "9p",
+      "3m",
+      "4m",
+      "5m",
+      "5s",
+      "5s",
+      "3s",
+      "6m",
+      "7m",
+      "8m"
+    ],
+    "open_melds": [
+      {
+        "type": "chi",
+        "tiles": [
+          "4m",
+          "5m",
+          "3m"
+        ],
+        "consumed": [
+          "4m",
+          "5m"
+        ],
+        "called_tile": "3m",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      },
+      {
+        "type": "chi",
+        "tiles": [
+          "7m",
+          "8m",
+          "6m"
+        ],
+        "consumed": [
+          "7m",
+          "8m"
+        ],
+        "called_tile": "6m",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      }
+    ],
+    "open_meld_count": 2,
+    "dora_indicators": [
+      "5p"
+    ],
+    "actual_discard": "1s",
+    "actual_evaluation": {
+      "discard": "1s",
+      "shanten": 0,
+      "ukeire": 3,
+      "effective_tiles": {
+        "9m": 3
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 3,
+          "effective_tiles": {
+            "9m": 3
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ],
+            [
+              "1s",
+              "2s",
+              "3s"
+            ]
+          ],
+          "taatsu": [],
+          "pairs": [],
+          "isolated": [
+            "9m"
+          ],
+          "open_melds": 2,
+          "block_count": 4,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "best_efficiency_discard": "9m",
+    "best_evaluation": {
+      "discard": "9m",
+      "shanten": 0,
+      "ukeire": 6,
+      "effective_tiles": {
+        "1s": 2,
+        "4s": 4
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 6,
+          "effective_tiles": {
+            "1s": 2,
+            "4s": 4
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ]
+          ],
+          "taatsu": [
+            [
+              "2s",
+              "3s"
+            ]
+          ],
+          "pairs": [
+            [
+              "1s",
+              "1s"
+            ]
+          ],
+          "isolated": [],
+          "open_melds": 2,
+          "block_count": 5,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "9m",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "9m",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "equally_efficient_discards": [
+      "9m"
+    ],
+    "actual_shanten_minus_alternative": 0,
+    "actual_ukeire_minus_alternative": -3,
+    "all_candidates": [
+      {
+        "discard": "9m",
+        "shanten": 0,
+        "ukeire": 6,
+        "effective_tiles": {
+          "1s": 2,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 6,
+            "effective_tiles": {
+              "1s": 2,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [],
+            "open_melds": 2,
+            "block_count": 5,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "9m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "9m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "1s",
+        "shanten": 0,
+        "ukeire": 3,
+        "effective_tiles": {
+          "9m": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 3,
+            "effective_tiles": {
+              "9m": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ],
+              [
+                "1s",
+                "2s",
+                "3s"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [],
+            "isolated": [
+              "9m"
+            ],
+            "open_melds": 2,
+            "block_count": 4,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "1s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "1s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2s",
+        "shanten": 1,
+        "ukeire": 22,
+        "effective_tiles": {
+          "7m": 3,
+          "8m": 3,
+          "9m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 2,
+          "4s": 4,
+          "5s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 22,
+            "effective_tiles": {
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 2,
+              "4s": 4,
+              "5s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "9m",
+              "3s"
+            ],
+            "open_melds": 2,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3s",
+        "shanten": 1,
+        "ukeire": 20,
+        "effective_tiles": {
+          "7m": 3,
+          "8m": 3,
+          "9m": 3,
+          "1s": 2,
+          "2s": 3,
+          "3s": 2,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 20,
+            "effective_tiles": {
+              "7m": 3,
+              "8m": 3,
+              "9m": 3,
+              "1s": 2,
+              "2s": 3,
+              "3s": 2,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "9m",
+              "2s"
+            ],
+            "open_melds": 2,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2m",
+        "shanten": 1,
+        "ukeire": 15,
+        "effective_tiles": {
+          "2m": 3,
+          "5m": 3,
+          "9m": 3,
+          "1s": 2,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 15,
+            "effective_tiles": {
+              "2m": 3,
+              "5m": 3,
+              "9m": 3,
+              "1s": 2,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "3m",
+                "4m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "9m"
+            ],
+            "open_melds": 2,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "4m",
+        "shanten": 1,
+        "ukeire": 14,
+        "effective_tiles": {
+          "1m": 3,
+          "4m": 2,
+          "9m": 3,
+          "1s": 2,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 14,
+            "effective_tiles": {
+              "1m": 3,
+              "4m": 2,
+              "9m": 3,
+              "1s": 2,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "2m",
+                "3m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "9m"
+            ],
+            "open_melds": 2,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "4m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "4m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3m",
+        "shanten": 1,
+        "ukeire": 11,
+        "effective_tiles": {
+          "3m": 2,
+          "9m": 3,
+          "1s": 2,
+          "4s": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 11,
+            "effective_tiles": {
+              "3m": 2,
+              "9m": 3,
+              "1s": 2,
+              "4s": 4
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "2m",
+                "4m"
+              ],
+              [
+                "2s",
+                "3s"
+              ]
+            ],
+            "pairs": [
+              [
+                "1s",
+                "1s"
+              ]
+            ],
+            "isolated": [
+              "9m"
+            ],
+            "open_melds": 2,
+            "block_count": 5,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      }
+    ]
+  },
+  {
+    "player": 0,
+    "round": {
+      "bakaze": "E",
+      "jikaze": "E",
+      "kyoku": 1,
+      "honba": 0,
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "oya": 0,
+      "kyotaku": 0
+    },
+    "turn": 5,
+    "drawn_tile": "W",
+    "hand": [
+      "2m",
+      "3m",
+      "4m",
+      "9m",
+      "1s"
+    ],
+    "visible_tiles": [
+      "5p",
+      "1m",
+      "8p",
+      "9p",
+      "F",
+      "W",
+      "C",
+      "9p",
+      "3m",
+      "4m",
+      "5m",
+      "5s",
+      "5s",
+      "3s",
+      "6m",
+      "7m",
+      "8m",
+      "1s",
+      "8p",
+      "W",
+      "4s",
+      "2s",
+      "3s"
+    ],
+    "open_melds": [
+      {
+        "type": "chi",
+        "tiles": [
+          "4m",
+          "5m",
+          "3m"
+        ],
+        "consumed": [
+          "4m",
+          "5m"
+        ],
+        "called_tile": "3m",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      },
+      {
+        "type": "chi",
+        "tiles": [
+          "7m",
+          "8m",
+          "6m"
+        ],
+        "consumed": [
+          "7m",
+          "8m"
+        ],
+        "called_tile": "6m",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      },
+      {
+        "type": "chi",
+        "tiles": [
+          "2s",
+          "3s",
+          "4s"
+        ],
+        "consumed": [
+          "2s",
+          "3s"
+        ],
+        "called_tile": "4s",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      }
+    ],
+    "open_meld_count": 3,
+    "dora_indicators": [
+      "5p"
+    ],
+    "actual_discard": "9m",
+    "actual_evaluation": {
+      "discard": "9m",
+      "shanten": 0,
+      "ukeire": 2,
+      "effective_tiles": {
+        "1s": 2
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 2,
+          "effective_tiles": {
+            "1s": 2
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ]
+          ],
+          "taatsu": [],
+          "pairs": [],
+          "isolated": [
+            "1s"
+          ],
+          "open_melds": 3,
+          "block_count": 4,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "9m",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "9m",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "best_efficiency_discard": "1s",
+    "best_evaluation": {
+      "discard": "1s",
+      "shanten": 0,
+      "ukeire": 3,
+      "effective_tiles": {
+        "9m": 3
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 3,
+          "effective_tiles": {
+            "9m": 3
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ]
+          ],
+          "taatsu": [],
+          "pairs": [],
+          "isolated": [
+            "9m"
+          ],
+          "open_melds": 3,
+          "block_count": 4,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "equally_efficient_discards": [
+      "1s"
+    ],
+    "actual_shanten_minus_alternative": 0,
+    "actual_ukeire_minus_alternative": -1,
+    "all_candidates": [
+      {
+        "discard": "1s",
+        "shanten": 0,
+        "ukeire": 3,
+        "effective_tiles": {
+          "9m": 3
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 3,
+            "effective_tiles": {
+              "9m": 3
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [],
+            "isolated": [
+              "9m"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "1s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "1s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "9m",
+        "shanten": 0,
+        "ukeire": 2,
+        "effective_tiles": {
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 2,
+            "effective_tiles": {
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [],
+            "isolated": [
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "9m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "9m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2m",
+        "shanten": 1,
+        "ukeire": 11,
+        "effective_tiles": {
+          "2m": 3,
+          "5m": 3,
+          "9m": 3,
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 11,
+            "effective_tiles": {
+              "2m": 3,
+              "5m": 3,
+              "9m": 3,
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "3m",
+                "4m"
+              ]
+            ],
+            "pairs": [],
+            "isolated": [
+              "9m",
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "4m",
+        "shanten": 1,
+        "ukeire": 10,
+        "effective_tiles": {
+          "1m": 3,
+          "4m": 2,
+          "9m": 3,
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 10,
+            "effective_tiles": {
+              "1m": 3,
+              "4m": 2,
+              "9m": 3,
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "2m",
+                "3m"
+              ]
+            ],
+            "pairs": [],
+            "isolated": [
+              "9m",
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "4m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "4m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3m",
+        "shanten": 1,
+        "ukeire": 7,
+        "effective_tiles": {
+          "3m": 2,
+          "9m": 3,
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 7,
+            "effective_tiles": {
+              "3m": 2,
+              "9m": 3,
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "2m",
+                "4m"
+              ]
+            ],
+            "pairs": [],
+            "isolated": [
+              "9m",
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      }
+    ]
+  },
+  {
+    "player": 0,
+    "round": {
+      "bakaze": "E",
+      "jikaze": "E",
+      "kyoku": 1,
+      "honba": 0,
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "oya": 0,
+      "kyotaku": 0
+    },
+    "turn": 6,
+    "drawn_tile": "5m",
+    "hand": [
+      "2m",
+      "3m",
+      "4m",
+      "1s",
+      "5m"
+    ],
+    "visible_tiles": [
+      "5p",
+      "1m",
+      "8p",
+      "9p",
+      "F",
+      "W",
+      "C",
+      "9p",
+      "3m",
+      "4m",
+      "5m",
+      "5s",
+      "5s",
+      "3s",
+      "6m",
+      "7m",
+      "8m",
+      "1s",
+      "8p",
+      "W",
+      "4s",
+      "2s",
+      "3s",
+      "9m",
+      "F",
+      "N",
+      "C"
+    ],
+    "open_melds": [
+      {
+        "type": "chi",
+        "tiles": [
+          "4m",
+          "5m",
+          "3m"
+        ],
+        "consumed": [
+          "4m",
+          "5m"
+        ],
+        "called_tile": "3m",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      },
+      {
+        "type": "chi",
+        "tiles": [
+          "7m",
+          "8m",
+          "6m"
+        ],
+        "consumed": [
+          "7m",
+          "8m"
+        ],
+        "called_tile": "6m",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      },
+      {
+        "type": "chi",
+        "tiles": [
+          "2s",
+          "3s",
+          "4s"
+        ],
+        "consumed": [
+          "2s",
+          "3s"
+        ],
+        "called_tile": "4s",
+        "from_player": 3,
+        "actor": 0,
+        "open": true
+      }
+    ],
+    "open_meld_count": 3,
+    "dora_indicators": [
+      "5p"
+    ],
+    "actual_discard": "1s",
+    "actual_evaluation": {
+      "discard": "1s",
+      "shanten": 0,
+      "ukeire": 5,
+      "effective_tiles": {
+        "2m": 3,
+        "5m": 2
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 5,
+          "effective_tiles": {
+            "2m": 3,
+            "5m": 2
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ]
+          ],
+          "taatsu": [],
+          "pairs": [],
+          "isolated": [
+            "5m"
+          ],
+          "open_melds": 3,
+          "block_count": 4,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "best_efficiency_discard": "1s",
+    "best_evaluation": {
+      "discard": "1s",
+      "shanten": 0,
+      "ukeire": 5,
+      "effective_tiles": {
+        "2m": 3,
+        "5m": 2
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 0
+        },
+        "chiitoitsu": {
+          "available": false,
+          "shanten": null
+        },
+        "kokushi": {
+          "available": false,
+          "shanten": null
+        },
+        "minimum": 0,
+        "best_routes": [
+          "regular"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 0,
+          "available": true,
+          "ukeire": 5,
+          "effective_tiles": {
+            "2m": 3,
+            "5m": 2
+          }
+        },
+        "chiitoitsu": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        },
+        "kokushi": {
+          "shanten": null,
+          "available": false,
+          "ukeire": 0,
+          "effective_tiles": {}
+        }
+      },
+      "blocks": [
+        {
+          "route": "regular",
+          "melds": [
+            [
+              "2m",
+              "3m",
+              "4m"
+            ]
+          ],
+          "taatsu": [],
+          "pairs": [],
+          "isolated": [
+            "5m"
+          ],
+          "open_melds": 3,
+          "block_count": 4,
+          "structural_shanten": 0
+        }
+      ],
+      "discarded_tile_yaku_potential": {
+        "tile": "1s",
+        "is_honor": false,
+        "is_yakuhai": false,
+        "yakuhai_reasons": [],
+        "potential_yakuhai_han": 0
+      },
+      "discarded_tile_dora": {
+        "tile": "1s",
+        "is_aka_dora": false,
+        "is_indicator_dora": false,
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "potential_bonus_han": 0
+      }
+    },
+    "equally_efficient_discards": [
+      "1s"
+    ],
+    "actual_shanten_minus_alternative": 0,
+    "actual_ukeire_minus_alternative": 0,
+    "all_candidates": [
+      {
+        "discard": "1s",
+        "shanten": 0,
+        "ukeire": 5,
+        "effective_tiles": {
+          "2m": 3,
+          "5m": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 5,
+            "effective_tiles": {
+              "2m": 3,
+              "5m": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [],
+            "isolated": [
+              "5m"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "1s",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "1s",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "2m",
+        "shanten": 0,
+        "ukeire": 2,
+        "effective_tiles": {
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 2,
+            "effective_tiles": {
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "3m",
+                "4m",
+                "5m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [],
+            "isolated": [
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "2m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "2m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "5m",
+        "shanten": 0,
+        "ukeire": 2,
+        "effective_tiles": {
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 0
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 0,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 0,
+            "available": true,
+            "ukeire": 2,
+            "effective_tiles": {
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "2m",
+                "3m",
+                "4m"
+              ]
+            ],
+            "taatsu": [],
+            "pairs": [],
+            "isolated": [
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 0
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "5m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "5m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "3m",
+        "shanten": 1,
+        "ukeire": 12,
+        "effective_tiles": {
+          "2m": 3,
+          "3m": 2,
+          "5m": 2,
+          "6m": 3,
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 12,
+            "effective_tiles": {
+              "2m": 3,
+              "3m": 2,
+              "5m": 2,
+              "6m": 3,
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "2m",
+                "4m"
+              ]
+            ],
+            "pairs": [],
+            "isolated": [
+              "5m",
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "3m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "3m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      },
+      {
+        "discard": "4m",
+        "shanten": 1,
+        "ukeire": 12,
+        "effective_tiles": {
+          "1m": 3,
+          "2m": 3,
+          "4m": 2,
+          "5m": 2,
+          "1s": 2
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 1
+          },
+          "chiitoitsu": {
+            "available": false,
+            "shanten": null
+          },
+          "kokushi": {
+            "available": false,
+            "shanten": null
+          },
+          "minimum": 1,
+          "best_routes": [
+            "regular"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 12,
+            "effective_tiles": {
+              "1m": 3,
+              "2m": 3,
+              "4m": 2,
+              "5m": 2,
+              "1s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          },
+          "kokushi": {
+            "shanten": null,
+            "available": false,
+            "ukeire": 0,
+            "effective_tiles": {}
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [],
+            "taatsu": [
+              [
+                "2m",
+                "3m"
+              ]
+            ],
+            "pairs": [],
+            "isolated": [
+              "5m",
+              "1s"
+            ],
+            "open_melds": 3,
+            "block_count": 4,
+            "structural_shanten": 1
+          }
+        ],
+        "discarded_tile_yaku_potential": {
+          "tile": "4m",
+          "is_honor": false,
+          "is_yakuhai": false,
+          "yakuhai_reasons": [],
+          "potential_yakuhai_han": 0
+        },
+        "discarded_tile_dora": {
+          "tile": "4m",
+          "is_aka_dora": false,
+          "is_indicator_dora": false,
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "potential_bonus_han": 0
+        }
+      }
+    ]
+  }
+]

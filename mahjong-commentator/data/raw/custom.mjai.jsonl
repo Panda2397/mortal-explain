@@ -1,0 +1,12 @@
+{"type": "start_game", "id": 0, "names": ["P0", "P1", "P2", "P3"]}
+{"type": "start_kyoku", "bakaze": "E", "kyoku": 1, "honba": 0, "kyotaku": 0, "oya": 0, "scores": [25000, 25000, 25000, 25000], "dora_marker": "4p", "tehais": [["1m", "1m", "2m", "2m", "3m", "3m", "4m", "4m", "5m", "5m", "6m", "6m", "7m"], ["1m", "1m", "2m", "2m", "3m", "3m", "4m", "4m", "5m", "5m", "6m", "6m", "7m"], ["1p", "2p", "F", "C", "F", "1p", "2p", "3p", "5p", "6p", "7p", "8m", "9m"], ["1s", "1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "9s", "9s", "9s"]]}
+{"type": "tsumo", "actor": 0, "pai": "F"}
+{"type": "dahai", "actor": 0, "pai": "7m", "tsumogiri": false}
+{"type": "tsumo", "actor": 1, "pai": "1s"}
+{"type": "dahai", "actor": 1, "pai": "1s", "tsumogiri": true}
+{"type": "tsumo", "actor": 2, "pai": "1s"}
+{"type": "dahai", "actor": 2, "pai": "1s", "tsumogiri": true}
+{"type": "tsumo", "actor": 3, "pai": "2s"}
+{"type": "dahai", "actor": 3, "pai": "2s", "tsumogiri": true}
+{"type": "tsumo", "actor": 0, "pai": "F"}
+{"type": "dahai", "actor": 0, "pai": "F", "tsumogiri": false}

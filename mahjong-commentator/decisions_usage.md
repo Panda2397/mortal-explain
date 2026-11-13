@@ -43,4 +43,29 @@ few alternatives needed for commentary. Do not send the complete dataset.
 For route-aware evaluation, provide explicit fields such as `best_route` and
 `selected_route_analysis`. The LLM should treat those fields as authoritative
 and should not compare ukeire values from routes with different shanten values.
+# Open meld representation
+
+Newly generated decisions store both the meld details and the numeric count:
+
+```json
+{
+  "open_melds": [
+    {
+      "type": "pon",
+      "tiles": ["F", "F", "F"],
+      "consumed": ["F", "F"],
+      "called_tile": "F",
+      "from_player": 1,
+      "actor": 0,
+      "open": true
+    }
+  ],
+  "open_meld_count": 1
+}
+```
+
+`open_meld_count` is passed to shanten/block calculations. `open_melds`
+preserves the evidence needed for yaku and commentary analysis. Older fixture
+files that store `open_melds` as an integer remain readable, but their meld
+tiles are unknown.
 

@@ -43,6 +43,17 @@ Evaluation after the player's actual discard.
 best_evaluation:
 Evaluation after the preferred alternative discard.
 
+open_meld_count:
+Number of fixed called melds. This numeric field is used by shanten and block
+calculations.
+
+open_melds:
+Structured called-meld evidence. Each object can contain `type` (`chi`, `pon`,
+`daiminkan`, `ankan`, or `kakan`), the complete `tiles`, tiles `consumed` from
+the player's hand, `called_tile`, `from_player`, `actor`, and whether it is
+`open`. Use these tiles as verified meld facts. Their presence alone does not
+prove an additional yaku unless yaku evidence explicitly confirms it.
+
 shanten:
 向聽數. The number of tile improvements needed
 to reach tenpai, minus one.

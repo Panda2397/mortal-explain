@@ -3,8 +3,14 @@
 import argparse
 import json
 import re
+import statistics
 from pathlib import Path
 
+from evaluator.comparison import (
+    VERDICTS,
+    efficiency_reason_codes,
+    efficiency_verdict,
+)
 from utils.tile_format import tile_to_chinese
 
 
@@ -15,11 +21,12 @@ HEADINGS = [
     "### 4.",
 ]
 
-VALID_COMPARISONS = {"actual_better", "recommended_better", "equal"}
+LEGACY_COMPARISONS = {"actual_better", "recommended_better", "equal"}
+VALID_COMPARISONS = VERDICTS | LEGACY_COMPARISONS
 
 
 def expected_structured_answer(decision: dict) -> tuple[str, set[str]]:
-    """Derive the gold comparison from evaluator output, not LLM prose."""
+    """Compatibility helper for prediction files using the legacy schema."""
     actual = decision["actual_evaluation"]
     best = decision["best_evaluation"]
     reasons = set()
@@ -41,6 +48,14 @@ def expected_structured_answer(decision: dict) -> tuple[str, set[str]]:
     if decision["actual_discard"] == decision["best_efficiency_discard"]:
         reasons.add("ACTUAL_EQUALS_RECOMMENDATION")
     return comparison, reasons
+
+
+def expected_answer_for_prediction(
+    decision: dict, parsed: dict
+) -> tuple[str, set[str]]:
+    if parsed["comparison"] in LEGACY_COMPARISONS:
+        return expected_structured_answer(decision)
+    return efficiency_verdict(decision), set(efficiency_reason_codes(decision))
 
 
 def parse_structured_prediction(prediction: dict) -> dict | None:
@@ -66,18 +81,20 @@ def parse_structured_prediction(prediction: dict) -> dict | None:
 
 
 def check_structured_prediction(decision: dict, prediction: dict) -> dict:
-    expected_comparison, expected_reasons = expected_structured_answer(decision)
     parsed = parse_structured_prediction(prediction)
     if parsed is None:
         return {
-            "json_valid": 0,
-            "comparison_accuracy": 0,
-            "reason_code_precision": 0.0,
-            "reason_code_recall": 0.0,
-            "explanation_compliance": 0,
+            "raw_json_format_compliance": 0,
+            "raw_comparison_verdict_accuracy": 0,
+            "raw_reason_code_precision": 0.0,
+            "raw_reason_code_recall": 0.0,
+            "raw_explanation_compliance": 0,
             "structured_errors": ["model response is not valid benchmark JSON"],
         }
 
+    expected_comparison, expected_reasons = expected_answer_for_prediction(
+        decision, parsed
+    )
     predicted_reasons = set(parsed["reason_codes_used"])
     precision = (
         len(predicted_reasons & expected_reasons) / len(predicted_reasons)
@@ -102,17 +119,33 @@ def check_structured_prediction(decision: dict, prediction: dict) -> dict:
     if not explanation_ok:
         errors.append("explanation is empty or repeats protected facts")
     return {
-        "json_valid": 1,
-        "comparison_accuracy": int(parsed["comparison"] == expected_comparison),
-        "reason_code_precision": precision,
-        "reason_code_recall": recall,
-        "explanation_compliance": int(explanation_ok),
+        "raw_json_format_compliance": 1,
+        "raw_comparison_verdict_accuracy": int(
+            parsed["comparison"] == expected_comparison
+        ),
+        "raw_reason_code_precision": precision,
+        "raw_reason_code_recall": recall,
+        "raw_explanation_compliance": int(explanation_ok),
         "structured_errors": errors,
     }
 
 
 def _contains_value(text: str, value) -> bool:
     return str(value) in text
+
+
+def percentile_90(values: list[float]) -> float:
+    ordered = sorted(values)
+    return ordered[max(0, int(0.9 * len(ordered) + 0.999999) - 1)]
+
+
+def print_distribution(name: str, values: list[float]) -> None:
+    if not values:
+        return
+    print(f"{name}_mean: {statistics.mean(values):.1f}")
+    print(f"{name}_median: {statistics.median(values):.1f}")
+    print(f"{name}_p90: {percentile_90(values):.1f}")
+    print(f"{name}_max: {max(values):.1f}")
 
 
 def check_prediction(decision: dict, commentary: str) -> dict:
@@ -199,16 +232,16 @@ def check_prediction(decision: dict, commentary: str) -> dict:
         errors.append("one or more selected-route effective tiles are missing")
 
     return {
-        "format_compliance": int(format_ok),
-        "shanten_fidelity": int(shanten_ok),
-        "ukeire_fidelity": int(ukeire_ok),
-        "actual_discard_fidelity": int(actual_discard_ok),
-        "recommended_discard_fidelity": int(best_discard_ok),
-        "comparison_fidelity": int(comparison_ok),
-        "ukeire_comparison_fidelity": int(ukeire_comparison_ok),
-        "draw_fidelity": int(drawn_ok),
-        "route_accuracy": int(route_ok),
-        "effective_tile_fidelity": int(effective_ok),
+        "final_format_compliance": int(format_ok),
+        "final_shanten_fidelity": int(shanten_ok),
+        "final_ukeire_fidelity": int(ukeire_ok),
+        "final_actual_discard_fidelity": int(actual_discard_ok),
+        "final_recommended_discard_fidelity": int(best_discard_ok),
+        "final_comparison_fidelity": int(comparison_ok),
+        "final_ukeire_comparison_fidelity": int(ukeire_comparison_ok),
+        "final_draw_fidelity": int(drawn_ok),
+        "final_route_accuracy": int(route_ok),
+        "final_effective_tile_fidelity": int(effective_ok),
         "errors": errors,
     }
 
@@ -229,6 +262,7 @@ def main() -> None:
     expected_indices = set(json.loads(args.indices.read_text(encoding="utf-8")))
     scores = []
     seen_indices = set()
+    response_metadata = []
     for line in args.predictions.read_text(encoding="utf-8").splitlines():
         if not line.strip():
             continue
@@ -236,13 +270,28 @@ def main() -> None:
         index = prediction["index"]
         seen_indices.add(index)
         result = check_prediction(decisions[index], prediction["commentary"])
-        structured = check_structured_prediction(decisions[index], prediction)
-        result.update({k: v for k, v in structured.items() if k != "structured_errors"})
-        result["errors"].extend(structured["structured_errors"])
-        result["llm_explanation_used"] = int(
-            prediction.get("explanation_source") == "llm"
-        )
+        treatment = prediction.get("treatment", "legacy_structured_copy")
+        if treatment == "python_baseline":
+            result.update({
+                "raw_json_format_compliance": None,
+                "raw_comparison_verdict_accuracy": None,
+                "raw_reason_code_precision": None,
+                "raw_reason_code_recall": None,
+                "raw_explanation_compliance": None,
+                "production_fallback_rate": None,
+            })
+        else:
+            structured = check_structured_prediction(decisions[index], prediction)
+            result.update({
+                k: v for k, v in structured.items()
+                if k != "structured_errors"
+            })
+            result["errors"].extend(structured["structured_errors"])
+            result["production_fallback_rate"] = int(
+                prediction.get("explanation_source") != "llm"
+            )
         result["latency_ms"] = prediction.get("latency_ms")
+        response_metadata.append(prediction.get("response_metadata") or {})
         scores.append(result)
         if result["errors"]:
             print(f"{index}: {'; '.join(result['errors'])}")
@@ -257,18 +306,62 @@ def main() -> None:
     if extra_indices:
         print(f"extra prediction indices: {extra_indices}")
 
-    keys = [k for k in scores[0] if k not in {"errors", "latency_ms"}]
+    keys = sorted(
+        set().union(*(score.keys() for score in scores))
+        - {"errors", "latency_ms"}
+    )
     print(f"cases: {len(scores)}/{len(expected_indices)}")
     print(
         "benchmark_coverage: "
         f"{len(seen_indices & expected_indices) / len(expected_indices):.3f}"
     )
     for key in keys:
-        print(f"{key}: {sum(s[key] for s in scores) / len(scores):.3f}")
+        eligible = [score.get(key) for score in scores if score.get(key) is not None]
+        if eligible:
+            print(
+                f"{key}: {sum(eligible) / len(eligible):.3f} "
+                f"(eligible={len(eligible)})"
+            )
+        else:
+            print(f"{key}: N/A (eligible=0)")
     print(f"clean_cases: {sum(not s['errors'] for s in scores) / len(scores):.3f}")
     latencies = [s["latency_ms"] for s in scores if s["latency_ms"] is not None]
     if latencies:
-        print(f"latency_ms_mean: {sum(latencies) / len(latencies):.1f}")
+        print_distribution("wall_latency_ms", latencies)
+
+    duration_fields = {
+        "ollama_total_ms": "total_duration",
+        "model_load_ms": "load_duration",
+        "prompt_eval_ms": "prompt_eval_duration",
+        "generation_ms": "eval_duration",
+    }
+    for label, field in duration_fields.items():
+        values = [
+            metadata[field] / 1_000_000
+            for metadata in response_metadata
+            if metadata.get(field) is not None
+        ]
+        print_distribution(label, values)
+
+    for label, field in {
+        "prompt_tokens": "prompt_eval_count",
+        "output_tokens": "eval_count",
+        "thinking_chars": "thinking_chars",
+    }.items():
+        values = [
+            metadata[field]
+            for metadata in response_metadata
+            if metadata.get(field) is not None
+        ]
+        print_distribution(label, values)
+
+    tokens_per_second = [
+        metadata["eval_count"] / (metadata["eval_duration"] / 1_000_000_000)
+        for metadata in response_metadata
+        if metadata.get("eval_count") is not None
+        and metadata.get("eval_duration", 0) > 0
+    ]
+    print_distribution("generation_tokens_per_second", tokens_per_second)
 
 
 if __name__ == "__main__":

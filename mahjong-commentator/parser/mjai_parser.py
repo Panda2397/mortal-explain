@@ -1,4 +1,5 @@
 import json
+from copy import deepcopy
 from pathlib import Path
 from collections import Counter
 
@@ -24,7 +25,7 @@ class MJAIParser:
     def reset(self):
         self.hand = []
         self.visible_tiles = []
-        self.open_melds = 0
+        self.open_melds = []
 
         self.turn = 0
         self.round = None
@@ -45,7 +46,7 @@ class MJAIParser:
             )
 
         self.visible_tiles = []
-        self.open_melds = 0
+        self.open_melds = []
         self.turn = 0
 
         oya = event["oya"]
@@ -105,7 +106,8 @@ class MJAIParser:
                 "actual_discard": tile,
                 "tsumogiri": event.get("tsumogiri", False),
                 "visible_tiles": self.visible_tiles.copy(),
-                "open_melds": self.open_melds,
+                "open_melds": deepcopy(self.open_melds),
+                "open_meld_count": len(self.open_melds),
                 "dora_indicators": self.dora_indicators.copy(),
                 
             }
@@ -144,7 +146,17 @@ class MJAIParser:
 
             self.hand.remove(tile)
 
-        self.open_melds += 1
+        called_tile = event.get("pai")
+        consumed = event.get("consumed", []).copy()
+        self.open_melds.append({
+            "type": event["type"],
+            "tiles": consumed + ([called_tile] if called_tile else []),
+            "consumed": consumed,
+            "called_tile": called_tile,
+            "from_player": event.get("target"),
+            "actor": event.get("actor"),
+            "open": True,
+        })
 
         # Called tiles are now visible.
         # The claimed tile was already counted as a discard.
@@ -166,8 +178,36 @@ class MJAIParser:
 
             self.hand.remove(tile)
 
-        if event["type"] in ("daiminkan", "ankan"):
-            self.open_melds += 1
+        kan_type = event["type"]
+        called_tile = event.get("pai")
+        consumed = event.get("consumed", []).copy()
+        meld = {
+            "type": kan_type,
+            "tiles": consumed + ([called_tile] if called_tile else []),
+            "consumed": consumed,
+            "called_tile": called_tile,
+            "from_player": event.get("target"),
+            "actor": event.get("actor"),
+            "open": kan_type != "ankan",
+        }
+
+        if kan_type == "kakan":
+            normalized = (called_tile or (consumed[0] if consumed else "")).replace(
+                "r", ""
+            )
+            upgraded = next((
+                existing
+                for existing in self.open_melds
+                if existing["type"] == "pon"
+                and existing["tiles"]
+                and existing["tiles"][0].replace("r", "") == normalized
+            ), None)
+            if upgraded is not None:
+                upgraded.update(meld)
+            else:
+                self.open_melds.append(meld)
+        else:
+            self.open_melds.append(meld)
 
         for tile in event.get("consumed", []):
             if tile != "?":
