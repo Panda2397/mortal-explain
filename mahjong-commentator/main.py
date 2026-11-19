@@ -1,4 +1,5 @@
 from pathlib import Path
+from time import perf_counter
 
 from parser.mjai_parser import (
     load_mjai_log,
@@ -42,8 +43,15 @@ def main():
     events = load_mjai_log(log_path)
     decisions = extract_decisions(events, player_id=0)
 
-    for decision in decisions[:5]:
-        result = evaluate_decision(decision)
+    started = perf_counter()
+    evaluations = []
+    for index, decision in enumerate(decisions, start=1):
+        evaluations.append(evaluate_decision(decision))
+        if index % 25 == 0 or index == len(decisions):
+            elapsed = perf_counter() - started
+            print(f"Evaluated {index}/{len(decisions)} decisions ({elapsed:.1f}s)")
+
+    for result in evaluations[:5]:
 
         print("\n" + "=" * 50)
         print(f"Turn: {result['turn']}")
@@ -53,19 +61,19 @@ def main():
             result["best_efficiency_discard"],
         )
 
-        print("\nActual evaluation:")
-        print(result["actual_evaluation"])
-
-        print("\nBest evaluation:")
-        print(result["best_evaluation"])
+        actual = result["actual_evaluation"]
+        best = result["best_evaluation"]
+        print(
+            "Actual efficiency:",
+            f"{actual['shanten']} shanten / {actual['ukeire']} ukeire",
+        )
+        print(
+            "Best efficiency:",
+            f"{best['shanten']} shanten / {best['ukeire']} ukeire",
+        )
     import json
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-
-    evaluations = [
-        evaluate_decision(decision)
-        for decision in decisions
-    ]
 
     with output_path.open("w", encoding="utf-8") as f:
         json.dump(

@@ -21,32 +21,52 @@ def dora_from_indicator(indicator: str) -> str:
     return f"{next_number}{suit}"
 
 
-def analyze_discard_dora(
-    tile: str,
+def analyze_hand_dora(
+    concealed_tiles: list[str],
+    melds: list[dict],
     dora_indicators: list[str],
 ) -> dict:
-    """Analyze bonus-han potential lost by discarding this tile."""
-    is_aka_dora = tile.endswith("r")
-
+    """Count indicator dora and red dora currently held by the player."""
     indicator_dora = [
         dora_from_indicator(indicator)
         for indicator in dora_indicators
     ]
+    held_tiles = [(tile, "concealed", None) for tile in concealed_tiles]
+    for meld_index, meld in enumerate(melds):
+        held_tiles.extend(
+            (tile, "meld", meld_index)
+            for tile in (meld.get("tiles") or [])
+        )
 
-    normal_tile = tile.replace("r", "")
-
-    indicator_dora_count = sum(
-        tile_to_index(normal_tile) == tile_to_index(dora)
-        for dora in indicator_dora
-    )
+    tile_breakdown = []
+    aka_dora_han = 0
+    indicator_dora_han = 0
+    for tile, source, meld_index in held_tiles:
+        aka = int(tile.endswith("r"))
+        indicator_han = sum(
+            tile_to_index(tile) == tile_to_index(dora)
+            for dora in indicator_dora
+        )
+        if not aka and not indicator_han:
+            continue
+        item = {
+            "tile": tile,
+            "source": source,
+            "aka_dora_han": aka,
+            "indicator_dora_han": indicator_han,
+            "total_han": aka + indicator_han,
+        }
+        if meld_index is not None:
+            item["meld_index"] = meld_index
+        tile_breakdown.append(item)
+        aka_dora_han += aka
+        indicator_dora_han += indicator_han
 
     return {
-        "tile": tile,
-        "is_aka_dora": is_aka_dora,
-        "is_indicator_dora": indicator_dora_count > 0,
-        "aka_dora_han": int(is_aka_dora),
-        "indicator_dora_han": indicator_dora_count,
-        "potential_bonus_han": (
-            int(is_aka_dora) + indicator_dora_count
-        ),
+        "dora_indicators": dora_indicators.copy(),
+        "indicator_dora_tiles": indicator_dora,
+        "aka_dora_han": aka_dora_han,
+        "indicator_dora_han": indicator_dora_han,
+        "total_dora_han": aka_dora_han + indicator_dora_han,
+        "tiles": tile_breakdown,
     }

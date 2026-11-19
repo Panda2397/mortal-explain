@@ -79,6 +79,30 @@ Do not run this merely to evaluate existing predictions. Prediction indices
 refer to the current ordering in `decisions.json`; rebuilding from different
 input data can invalidate those indices.
 
+### Process every raw JSONL log
+
+To evaluate every `data/raw/*.jsonl` file and write the corresponding
+`data/processed/<same-name>.json` file:
+
+```powershell
+python batch_process.py
+```
+
+It prompts for both directories; press Enter to use `data/raw` and
+`data/processed`:
+
+```text
+Input directory [D:\...\mahjong-commentator\data\raw]:
+Output directory [D:\...\mahjong-commentator\data\processed]:
+```
+
+The batch continues if one log fails and exits with a non-zero status after
+reporting all failures. To evaluate another player or use different folders:
+
+```powershell
+python batch_process.py --player 1 --raw-dir path\to\raw --processed-dir path\to\processed
+```
+
 ## 2. Generate the Python-only baseline
 
 This makes no LLM call:

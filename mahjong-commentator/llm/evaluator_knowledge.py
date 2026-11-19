@@ -75,29 +75,19 @@ Example:
 {"3m": 4} means four copies of 3萬 are estimated
 to remain. It does NOT mean efficiency score 4.
 
-discarded_tile_yaku_potential:
-Describes the potential yakuhai value of the
-tile being discarded, NOT the hand's current han.
+hand_yakuhai:
+Value-honor triplets or quads already present in the post-discard hand,
+including concealed sets and fixed melds. `total_han` is the sum of their
+dragon, round-wind, and seat-wind roles. It does not describe incomplete
+pairs. `potential_sets` separately reports held value-honor singletons or
+pairs, copies needed, known live copies, and whether a pair is promising.
+Potential is not completed han.
 
-is_honor:
-Whether the discarded tile is a wind or dragon.
-
-is_yakuhai:
-Whether the discarded tile is a value honor
-given the current round wind and seat wind.
-
-potential_yakuhai_han:
-The number of yakuhai han that tile could provide
-if it formed a qualifying triplet or quad.
-It does NOT mean the hand currently has those han.
-
-potential_bonus_han: (aka dora)
-The number of bonus han that tile could provide
-if it formed a qualifying triplet or quad.
-
-indicator_dora_han: (dora)
-The number of dora han that tile could provide
-if it formed a qualifying triplet or quad.
+hand_dora:
+Bonus tiles currently present in the post-discard concealed hand and fixed
+melds. `aka_dora_han` counts red fives, `indicator_dora_han` counts matches
+to revealed indicators, and `total_dora_han` is their sum. One red five may
+count in both categories when it is also indicator dora. Dora is not a yaku.
 
 blocks:
 Possible decompositions of the hand after
@@ -114,8 +104,7 @@ decomposition as the only interpretation.
 
 1. Prefer lower shanten.
 2. When shanten is equal, prefer higher ukeire.
-3. When both are equal, use the configured
-   yakuhai tie-break heuristic if applicable.
+3. When both are equal, treat the candidates as equally efficient.
 4. Do not claim the evaluator accounts for defense,
    hand value, dora preservation, or opponent behavior
    unless those features are explicitly evaluated.

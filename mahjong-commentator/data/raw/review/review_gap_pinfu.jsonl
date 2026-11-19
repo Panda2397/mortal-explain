@@ -1,0 +1,6 @@
+{"type": "start_game"}
+{"type": "start_kyoku", "bakaze": "E", "kyoku": 1, "honba": 0, "kyotaku": 0, "oya": 0, "scores": [25000, 25000, 25000, 25000], "dora_marker": "9p", "tehais": [["1m", "2m", "3m", "4m", "6m", "4s", "5s", "6s", "7s", "8s", "9s", "N", "N"], ["?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?"], ["?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?"], ["?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?"]]}
+{"type": "tsumo", "actor": 0, "pai": "C"}
+{"type": "dahai", "actor": 0, "pai": "C", "tsumogiri": true}
+{"type": "tsumo", "actor": 0, "pai": "5m"}
+{"type": "dahai", "actor": 0, "pai": "5m", "tsumogiri": true}

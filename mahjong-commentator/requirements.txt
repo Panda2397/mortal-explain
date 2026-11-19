@@ -1,0 +1,2 @@
+mahjong==2.0.0
+ollama==0.6.3

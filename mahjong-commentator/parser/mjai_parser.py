@@ -24,13 +24,15 @@ class MJAIParser:
 
     def reset(self):
         self.hand = []
-        self.visible_tiles = []
+        self.known_public_tiles = []
+        self.discards_by_player = {player: [] for player in range(4)}
         self.open_melds = []
 
         self.turn = 0
         self.round = None
         self.dora_indicators = []
         self.drawn_tile = None
+        self.pending_action = None
 
         self.decisions = []
 
@@ -45,9 +47,12 @@ class MJAIParser:
                 "Use a log from the target player's perspective."
             )
 
-        self.visible_tiles = []
+        self.known_public_tiles = []
+        self.discards_by_player = {player: [] for player in range(4)}
         self.open_melds = []
         self.turn = 0
+        self.drawn_tile = None
+        self.pending_action = None
 
         oya = event["oya"]
 
@@ -70,7 +75,7 @@ class MJAIParser:
 
         if marker and marker != "?":
             self.dora_indicators.append(marker)
-            self.visible_tiles.append(marker)
+            self.known_public_tiles.append(marker)
 
     def process_draw(self, event: dict):
         """Add a tile when the target player draws."""
@@ -102,10 +107,11 @@ class MJAIParser:
                 "round": self.round.copy() if self.round else None,
                 "turn": self.turn + 1,
                 "drawn_tile": self.drawn_tile,
+                "preceding_action": deepcopy(self.pending_action),
                 "hand": self.hand.copy(),
                 "actual_discard": tile,
-                "tsumogiri": event.get("tsumogiri", False),
-                "visible_tiles": self.visible_tiles.copy(),
+                "visible_tiles": self.known_public_tiles.copy(),
+                "discards_by_player": deepcopy(self.discards_by_player),
                 "open_melds": deepcopy(self.open_melds),
                 "open_meld_count": len(self.open_melds),
                 "dora_indicators": self.dora_indicators.copy(),
@@ -122,10 +128,16 @@ class MJAIParser:
 
             self.hand.remove(tile)
             self.turn += 1
+            # A draw or call applies only to this discard decision. Keeping
+            # it beyond the discard made later chi/pon turns display a stale
+            # tile as though it had just been drawn.
+            self.drawn_tile = None
+            self.pending_action = None
 
         # All discards are publicly visible
         if tile != "?":
-            self.visible_tiles.append(tile)
+            self.known_public_tiles.append(tile)
+            self.discards_by_player.setdefault(actor, []).append(tile)
 
     def process_call(self, event: dict):
         """
@@ -135,8 +147,22 @@ class MJAIParser:
         the player's hand.
         """
 
+        # The claimed tile is already counted as a discard. Consumed tiles
+        # become public no matter which player made the call.
+        for tile in event.get("consumed", []):
+            if tile != "?":
+                self.known_public_tiles.append(tile)
+
         if event.get("actor") != self.player_id:
             return
+
+        called_tile = event.get("pai")
+        self.drawn_tile = None
+        self.pending_action = {
+            "type": event["type"],
+            "tile": called_tile,
+            "from_player": event.get("target"),
+        }
 
         for tile in event.get("consumed", []):
             if tile not in self.hand:
@@ -146,7 +172,6 @@ class MJAIParser:
 
             self.hand.remove(tile)
 
-        called_tile = event.get("pai")
         consumed = event.get("consumed", []).copy()
         self.open_melds.append({
             "type": event["type"],
@@ -158,19 +183,36 @@ class MJAIParser:
             "open": True,
         })
 
-        # Called tiles are now visible.
-        # The claimed tile was already counted as a discard.
-        for tile in event.get("consumed", []):
-            if tile != "?":
-                self.visible_tiles.append(tile)
-
     def process_kan(self, event: dict):
         """Handle kan events made by the target player."""
+
+        kan_type = event["type"]
+        called_tile = event.get("pai")
+        consumed = event.get("consumed", []).copy()
+        newly_visible = [called_tile] if kan_type == "kakan" else consumed
+        for tile in newly_visible:
+            if tile and tile != "?":
+                self.known_public_tiles.append(tile)
 
         if event.get("actor") != self.player_id:
             return
 
-        for tile in event.get("consumed", []):
+        representative_tile = called_tile or (consumed[0] if consumed else None)
+        self.drawn_tile = None
+        self.pending_action = {
+            "type": kan_type,
+            "tile": representative_tile,
+            "from_player": event.get("target"),
+        }
+
+        # In MJAI kakan events, ``consumed`` identifies the existing pon and
+        # ``pai`` is the fourth tile being added from the concealed hand.
+        # Other kan types consume all tiles listed in ``consumed``.
+        removed_tiles = [called_tile] if kan_type == "kakan" else consumed
+
+        for tile in removed_tiles:
+            if tile is None:
+                raise ValueError(f"{kan_type} event is missing a tile")
             if tile not in self.hand:
                 raise ValueError(
                     f"Cannot consume {tile}: not in hand {self.hand}"
@@ -178,9 +220,6 @@ class MJAIParser:
 
             self.hand.remove(tile)
 
-        kan_type = event["type"]
-        called_tile = event.get("pai")
-        consumed = event.get("consumed", []).copy()
         meld = {
             "type": kan_type,
             "tiles": consumed + ([called_tile] if called_tile else []),
@@ -208,10 +247,6 @@ class MJAIParser:
                 self.open_melds.append(meld)
         else:
             self.open_melds.append(meld)
-
-        for tile in event.get("consumed", []):
-            if tile != "?":
-                self.visible_tiles.append(tile)
 
     def parse(self, events: list[dict]) -> list[dict]:
         """Process an MJAI event stream."""
@@ -241,7 +276,7 @@ class MJAIParser:
 
                 if marker and marker != "?":
                     self.dora_indicators.append(marker)
-                    self.visible_tiles.append(marker)
+                    self.known_public_tiles.append(marker)
 
         return self.decisions
 

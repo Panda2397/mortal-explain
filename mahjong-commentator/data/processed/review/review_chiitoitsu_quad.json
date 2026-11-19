@@ -1,0 +1,6318 @@
+[
+  {
+    "schema_version": "1.2",
+    "yaku_detector": {
+      "version": "0.4.0",
+      "ruleset": "riichi_4p_kuitan_aka",
+      "supported_yaku": [
+        "chanta",
+        "chiitoitsu",
+        "chinitsu",
+        "chinroutou",
+        "chuuren_poutou",
+        "daisangen",
+        "daisuushii",
+        "honitsu",
+        "honroutou",
+        "iipeikou",
+        "ittsu",
+        "junchan",
+        "kokushi",
+        "pinfu",
+        "ryanpeikou",
+        "ryuuiisou",
+        "sanankou",
+        "sankantsu",
+        "sanshoku_doujun",
+        "sanshoku_doukou",
+        "shousangen",
+        "shousuushii",
+        "suuankou",
+        "suukantsu",
+        "tanyao",
+        "toitoi",
+        "tsuuiisou",
+        "yakuhai"
+      ],
+      "inventory": {
+        "pinfu": {
+          "category": "menzen_only",
+          "structural": true,
+          "supported": true
+        },
+        "iipeikou": {
+          "category": "menzen_only",
+          "structural": true,
+          "supported": true
+        },
+        "ryanpeikou": {
+          "category": "menzen_only",
+          "structural": true,
+          "supported": true
+        },
+        "chiitoitsu": {
+          "category": "menzen_only",
+          "structural": true,
+          "supported": true
+        },
+        "riichi": {
+          "category": "menzen_only",
+          "structural": false,
+          "supported": false
+        },
+        "double_riichi": {
+          "category": "menzen_only",
+          "structural": false,
+          "supported": false
+        },
+        "ippatsu": {
+          "category": "menzen_only",
+          "structural": false,
+          "supported": false
+        },
+        "menzen_tsumo": {
+          "category": "menzen_only",
+          "structural": false,
+          "supported": false
+        },
+        "sanshoku_doujun": {
+          "category": "open_reduced",
+          "structural": true,
+          "supported": true
+        },
+        "ittsu": {
+          "category": "open_reduced",
+          "structural": true,
+          "supported": true
+        },
+        "chanta": {
+          "category": "open_reduced",
+          "structural": true,
+          "supported": true
+        },
+        "junchan": {
+          "category": "open_reduced",
+          "structural": true,
+          "supported": true
+        },
+        "honitsu": {
+          "category": "open_reduced",
+          "structural": true,
+          "supported": true
+        },
+        "chinitsu": {
+          "category": "open_reduced",
+          "structural": true,
+          "supported": true
+        },
+        "tanyao": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true,
+          "rule": "open_tanyao"
+        },
+        "yakuhai": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true
+        },
+        "toitoi": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true
+        },
+        "sanankou": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true
+        },
+        "sanshoku_doukou": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true
+        },
+        "honroutou": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true
+        },
+        "sankantsu": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true,
+          "distance": "action_dependent_heuristic"
+        },
+        "shousangen": {
+          "category": "open_same",
+          "structural": true,
+          "supported": true
+        },
+        "haitei": {
+          "category": "open_same",
+          "structural": false,
+          "supported": false
+        },
+        "houtei": {
+          "category": "open_same",
+          "structural": false,
+          "supported": false
+        },
+        "rinshan_kaihou": {
+          "category": "open_same",
+          "structural": false,
+          "supported": false
+        },
+        "chankan": {
+          "category": "open_same",
+          "structural": false,
+          "supported": false
+        },
+        "kokushi": {
+          "category": "yakuman_menzen",
+          "structural": true,
+          "supported": true
+        },
+        "suuankou": {
+          "category": "yakuman_menzen",
+          "structural": true,
+          "supported": true
+        },
+        "chuuren_poutou": {
+          "category": "yakuman_menzen",
+          "structural": true,
+          "supported": true
+        },
+        "tenhou": {
+          "category": "yakuman_menzen",
+          "structural": false,
+          "supported": false
+        },
+        "chiihou": {
+          "category": "yakuman_menzen",
+          "structural": false,
+          "supported": false
+        },
+        "daisangen": {
+          "category": "yakuman_open",
+          "structural": true,
+          "supported": true
+        },
+        "shousuushii": {
+          "category": "yakuman_open",
+          "structural": true,
+          "supported": true
+        },
+        "daisuushii": {
+          "category": "yakuman_open",
+          "structural": true,
+          "supported": true
+        },
+        "tsuuiisou": {
+          "category": "yakuman_open",
+          "structural": true,
+          "supported": true
+        },
+        "chinroutou": {
+          "category": "yakuman_open",
+          "structural": true,
+          "supported": true
+        },
+        "ryuuiisou": {
+          "category": "yakuman_open",
+          "structural": true,
+          "supported": true
+        },
+        "suukantsu": {
+          "category": "yakuman_open",
+          "structural": true,
+          "supported": true,
+          "distance": "action_dependent_heuristic"
+        }
+      },
+      "contract": {
+        "legacy_confirmed": "deprecated_union_of_component_and_yaku_tenpai",
+        "route_state": [
+          "none",
+          "component_present",
+          "yaku_tenpai",
+          "complete"
+        ],
+        "ukeire_kinds": [
+          "none",
+          "estimated_metric_improvement",
+          "exact_transition",
+          "scorer_validated"
+        ],
+        "ukeire_witnesses": "grouped_by_validation_discard_target_and_methods",
+        "processed_route_filter": "yaku_shanten - ordinary_shanten <= 1; established and impossible blocker routes are preserved"
+      }
+    },
+    "player": 0,
+    "round": {
+      "bakaze": "E",
+      "jikaze": "E",
+      "kyoku": 1,
+      "honba": 0,
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "oya": 0,
+      "kyotaku": 0
+    },
+    "turn": 1,
+    "drawn_tile": "E",
+    "preceding_action": null,
+    "hand": [
+      "1m",
+      "1m",
+      "1m",
+      "1m",
+      "2m",
+      "2m",
+      "3p",
+      "3p",
+      "4p",
+      "4p",
+      "5s",
+      "5s",
+      "E",
+      "E"
+    ],
+    "visible_tiles": [
+      "9s"
+    ],
+    "discards_by_player": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "own_discards": [],
+    "open_melds": [],
+    "open_meld_count": 0,
+    "dora_indicators": [
+      "9s"
+    ],
+    "current_yaku_analysis": {
+      "menzen": true,
+      "input_complete": true,
+      "has_established_yaku": false,
+      "opportunities": {
+        "yakuhai_E": {
+          "yaku": "yakuhai",
+          "feasibility": "possible",
+          "promising": true,
+          "guaranteed_on_completion": false,
+          "completed": null,
+          "supporting_tiles": [
+            "E",
+            "E"
+          ],
+          "obstructing_tiles": [],
+          "fixed_meld_indices": [],
+          "facts": [
+            "VALUE_HONOR_ROUTE_AVAILABLE"
+          ],
+          "metrics": {
+            "tile": "E",
+            "reasons": [
+              "round_wind",
+              "seat_wind"
+            ],
+            "han_if_completed": 2,
+            "concealed_count": 2,
+            "copies_needed": 1,
+            "live_copies": 2,
+            "structure_present": false
+          }
+        },
+        "tanyao": {
+          "yaku": "tanyao",
+          "feasibility": "unknown",
+          "promising": false,
+          "guaranteed_on_completion": false,
+          "completed": null,
+          "supporting_tiles": [
+            "2m",
+            "3p",
+            "4p",
+            "5s"
+          ],
+          "obstructing_tiles": [
+            "1m",
+            "1m",
+            "1m",
+            "1m",
+            "E",
+            "E"
+          ],
+          "fixed_meld_indices": [],
+          "facts": [
+            "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+          ],
+          "metrics": {
+            "incompatible_concealed_tiles": 6,
+            "simple_concealed_tiles": 4,
+            "open_tanyao_enabled": true,
+            "yaku_shanten": null,
+            "yaku_ukeire": null
+          }
+        }
+      },
+      "errors": [],
+      "confirmed_yaku": [],
+      "established_components": [],
+      "yaku_tenpai": [],
+      "validated_complete_yaku": [],
+      "yaku": {
+        "chiitoitsu": {
+          "shanten": {
+            "value": 1,
+            "measurement": "exact"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "exact",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "menzen_only",
+          "menzen_required": true,
+          "open_allowed": false,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "pinfu": {
+          "shanten": {
+            "value": 2,
+            "measurement": "heuristic"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [
+            {
+              "type": "concealed_tile",
+              "severity": "removable",
+              "reason": "value_honor_cannot_be_pinfu_pair",
+              "tile": "E"
+            },
+            {
+              "type": "concealed_tile",
+              "severity": "removable",
+              "reason": "value_honor_cannot_be_pinfu_pair",
+              "tile": "E"
+            },
+            {
+              "type": "concealed_group",
+              "severity": "removable",
+              "reason": "triplet_must_be_restructured",
+              "tile": "1m"
+            }
+          ],
+          "route_state": "none",
+          "proof": {
+            "distance": "heuristic",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "menzen_only",
+          "menzen_required": true,
+          "open_allowed": false,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "sanankou": {
+          "shanten": {
+            "value": 2,
+            "measurement": "lower_bound"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "lower_bound",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "open_same",
+          "menzen_required": false,
+          "open_allowed": true,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "sankantsu": {
+          "shanten": {
+            "value": 2,
+            "measurement": "heuristic"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "heuristic",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "open_same",
+          "menzen_required": false,
+          "open_allowed": true,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "suuankou": {
+          "shanten": {
+            "value": 2,
+            "measurement": "exact"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "exact",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "yakuman_menzen",
+          "menzen_required": true,
+          "open_allowed": false,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "toitoi": {
+          "shanten": {
+            "value": 2,
+            "measurement": "exact"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "exact",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "open_same",
+          "menzen_required": false,
+          "open_allowed": true,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "yakuhai_E": {
+          "shanten": {
+            "value": 2,
+            "measurement": "lower_bound"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "lower_bound",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "open_same",
+          "menzen_required": false,
+          "open_allowed": true,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "iipeikou": {
+          "shanten": {
+            "value": 3,
+            "measurement": "heuristic"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "heuristic",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "menzen_only",
+          "menzen_required": true,
+          "open_allowed": false,
+          "open_han_reduced": false,
+          "structural": true
+        },
+        "suukantsu": {
+          "shanten": {
+            "value": 3,
+            "measurement": "heuristic"
+          },
+          "ukeire": {},
+          "feasibility": "possible",
+          "yaku_blockers": [],
+          "route_state": "none",
+          "proof": {
+            "distance": "heuristic",
+            "validation": "unvalidated"
+          },
+          "outcome_scope": {
+            "ron": "unknown",
+            "tsumo": "unknown"
+          },
+          "availability": "unknown",
+          "guarantee": "none",
+          "legacy_feasibility": "possible",
+          "ukeire_kind": "none",
+          "ukeire_witnesses": [],
+          "estimated_improving_draws": {},
+          "yaku_category": "yakuman_open",
+          "menzen_required": false,
+          "open_allowed": true,
+          "open_han_reduced": false,
+          "structural": true
+        }
+      },
+      "route_evidence_status": "complete",
+      "route_filter": {
+        "max_extra_shanten": 1,
+        "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+        "preserves_established_and_impossible_routes": true
+      }
+    },
+    "actual_discard": "1m",
+    "actual_evaluation": {
+      "discard": "1m",
+      "shanten": 1,
+      "ukeire": 111,
+      "effective_tiles": {
+        "3m": 4,
+        "4m": 4,
+        "5m": 4,
+        "6m": 4,
+        "7m": 4,
+        "8m": 4,
+        "9m": 4,
+        "1p": 4,
+        "2p": 4,
+        "5p": 4,
+        "6p": 4,
+        "7p": 4,
+        "8p": 4,
+        "9p": 4,
+        "1s": 4,
+        "2s": 4,
+        "3s": 4,
+        "4s": 4,
+        "6s": 4,
+        "7s": 4,
+        "8s": 4,
+        "9s": 3,
+        "S": 4,
+        "W": 4,
+        "N": 4,
+        "P": 4,
+        "F": 4,
+        "C": 4
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 2
+        },
+        "chiitoitsu": {
+          "available": true,
+          "shanten": 1
+        },
+        "kokushi": {
+          "available": true,
+          "shanten": 10
+        },
+        "minimum": 1,
+        "best_routes": [
+          "chiitoitsu"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 2,
+          "available": true,
+          "ukeire": 18,
+          "effective_tiles": {
+            "2m": 2,
+            "2p": 4,
+            "3p": 2,
+            "4p": 2,
+            "5p": 4,
+            "5s": 2,
+            "E": 2
+          }
+        },
+        "chiitoitsu": {
+          "shanten": 1,
+          "available": true,
+          "ukeire": 111,
+          "effective_tiles": {
+            "3m": 4,
+            "4m": 4,
+            "5m": 4,
+            "6m": 4,
+            "7m": 4,
+            "8m": 4,
+            "9m": 4,
+            "1p": 4,
+            "2p": 4,
+            "5p": 4,
+            "6p": 4,
+            "7p": 4,
+            "8p": 4,
+            "9p": 4,
+            "1s": 4,
+            "2s": 4,
+            "3s": 4,
+            "4s": 4,
+            "6s": 4,
+            "7s": 4,
+            "8s": 4,
+            "9s": 3,
+            "S": 4,
+            "W": 4,
+            "N": 4,
+            "P": 4,
+            "F": 4,
+            "C": 4
+          }
+        },
+        "kokushi": {
+          "shanten": 10,
+          "available": true,
+          "ukeire": 43,
+          "effective_tiles": {
+            "9m": 4,
+            "1p": 4,
+            "9p": 4,
+            "1s": 4,
+            "9s": 3,
+            "S": 4,
+            "W": 4,
+            "N": 4,
+            "P": 4,
+            "F": 4,
+            "C": 4
+          }
+        }
+      },
+      "blocks": [
+        {
+          "route": "chiitoitsu",
+          "melds": [],
+          "taatsu": [],
+          "pairs": [
+            [
+              "1m",
+              "1m"
+            ],
+            [
+              "2m",
+              "2m"
+            ],
+            [
+              "3p",
+              "3p"
+            ],
+            [
+              "4p",
+              "4p"
+            ],
+            [
+              "5s",
+              "5s"
+            ],
+            [
+              "E",
+              "E"
+            ]
+          ],
+          "isolated": [
+            "1m"
+          ],
+          "open_melds": 0,
+          "block_count": 6,
+          "structural_shanten": 1
+        }
+      ],
+      "hand_dora": {
+        "dora_indicators": [
+          "9s"
+        ],
+        "indicator_dora_tiles": [
+          "1s"
+        ],
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "total_dora_han": 0,
+        "tiles": []
+      },
+      "own_discard_tiles_after_candidate": [
+        "1m"
+      ],
+      "yaku_analysis": {
+        "menzen": true,
+        "input_complete": true,
+        "has_established_yaku": false,
+        "opportunities": {
+          "yakuhai_E": {
+            "yaku": "yakuhai",
+            "feasibility": "possible",
+            "promising": true,
+            "guaranteed_on_completion": false,
+            "completed": null,
+            "supporting_tiles": [
+              "E",
+              "E"
+            ],
+            "obstructing_tiles": [],
+            "fixed_meld_indices": [],
+            "facts": [
+              "VALUE_HONOR_ROUTE_AVAILABLE"
+            ],
+            "metrics": {
+              "tile": "E",
+              "reasons": [
+                "round_wind",
+                "seat_wind"
+              ],
+              "han_if_completed": 2,
+              "concealed_count": 2,
+              "copies_needed": 1,
+              "live_copies": 2,
+              "structure_present": false
+            }
+          },
+          "tanyao": {
+            "yaku": "tanyao",
+            "feasibility": "unknown",
+            "promising": false,
+            "guaranteed_on_completion": false,
+            "completed": null,
+            "supporting_tiles": [
+              "2m",
+              "3p",
+              "4p",
+              "5s"
+            ],
+            "obstructing_tiles": [
+              "1m",
+              "1m",
+              "1m",
+              "E",
+              "E"
+            ],
+            "fixed_meld_indices": [],
+            "facts": [
+              "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+            ],
+            "metrics": {
+              "incompatible_concealed_tiles": 5,
+              "simple_concealed_tiles": 4,
+              "open_tanyao_enabled": true,
+              "yaku_shanten": null,
+              "yaku_ukeire": null
+            }
+          }
+        },
+        "errors": [],
+        "confirmed_yaku": [],
+        "established_components": [],
+        "yaku_tenpai": [],
+        "validated_complete_yaku": [],
+        "yaku": {
+          "chiitoitsu": {
+            "shanten": {
+              "value": 1,
+              "measurement": "exact"
+            },
+            "ukeire": {
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            },
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "exact",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "exact_transition",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "3m",
+                  "4m",
+                  "5m",
+                  "6m",
+                  "7m",
+                  "8m",
+                  "9m",
+                  "1p",
+                  "2p",
+                  "5p",
+                  "6p",
+                  "7p",
+                  "8p",
+                  "9p",
+                  "1s",
+                  "2s",
+                  "3s",
+                  "4s",
+                  "6s",
+                  "7s",
+                  "8s",
+                  "9s",
+                  "S",
+                  "W",
+                  "N",
+                  "P",
+                  "F",
+                  "C"
+                ],
+                "validation": "exact_transition",
+                "discard": "1m",
+                "yaku_shanten_after": 0
+              }
+            ],
+            "estimated_improving_draws": {},
+            "yaku_category": "menzen_only",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "pinfu": {
+            "shanten": {
+              "value": 2,
+              "measurement": "heuristic"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [
+              {
+                "type": "concealed_tile",
+                "severity": "removable",
+                "reason": "value_honor_cannot_be_pinfu_pair",
+                "tile": "E"
+              },
+              {
+                "type": "concealed_tile",
+                "severity": "removable",
+                "reason": "value_honor_cannot_be_pinfu_pair",
+                "tile": "E"
+              },
+              {
+                "type": "concealed_group",
+                "severity": "removable",
+                "reason": "triplet_must_be_restructured",
+                "tile": "1m"
+              }
+            ],
+            "route_state": "none",
+            "proof": {
+              "distance": "heuristic",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2p",
+                  "5p"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "E",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {
+              "2p": 4,
+              "5p": 4
+            },
+            "yaku_category": "menzen_only",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "sanankou": {
+            "shanten": {
+              "value": 2,
+              "measurement": "lower_bound"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "lower_bound",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "3p",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "2p",
+                  "3p",
+                  "4p",
+                  "5p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {
+              "2m": 2,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            },
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "suuankou": {
+            "shanten": {
+              "value": 2,
+              "measurement": "exact"
+            },
+            "ukeire": {
+              "2m": 2,
+              "3p": 2,
+              "4p": 2,
+              "5s": 2,
+              "E": 2
+            },
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "exact",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "exact_transition",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "exact_transition",
+                "discard": "3p",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "3p",
+                  "4p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "exact_transition",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {},
+            "yaku_category": "yakuman_menzen",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "toitoi": {
+            "shanten": {
+              "value": 2,
+              "measurement": "exact"
+            },
+            "ukeire": {
+              "2m": 2,
+              "3p": 2,
+              "4p": 2,
+              "5s": 2,
+              "E": 2
+            },
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "exact",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "exact_transition",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "exact_transition",
+                "discard": "3p",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "3p",
+                  "4p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "exact_transition",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {},
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "yakuhai_E": {
+            "shanten": {
+              "value": 2,
+              "measurement": "lower_bound"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "lower_bound",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "live",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "estimated_metric_improvement",
+            "ukeire_witnesses": [],
+            "estimated_improving_draws": {
+              "E": 2
+            },
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "iipeikou": {
+            "shanten": {
+              "value": 3,
+              "measurement": "heuristic"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "heuristic",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "3p",
+                "yaku_shanten_after": 2
+              },
+              {
+                "draws": [
+                  "3m"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "1m",
+                "yaku_shanten_after": 2
+              },
+              {
+                "draws": [
+                  "2p",
+                  "5p"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "3p",
+                  "4p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "2m",
+                "yaku_shanten_after": 2
+              }
+            ],
+            "estimated_improving_draws": {
+              "2m": 2,
+              "3m": 4,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            },
+            "yaku_category": "menzen_only",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "sankantsu": {
+            "shanten": {
+              "value": 3,
+              "measurement": "heuristic"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "heuristic",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [],
+            "estimated_improving_draws": {},
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          }
+        },
+        "route_evidence_status": "complete",
+        "route_filter": {
+          "max_extra_shanten": 1,
+          "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+          "preserves_established_and_impossible_routes": true
+        }
+      },
+      "tenpai_legality": {
+        "structural_tenpai": false,
+        "waits": {},
+        "status": "not_tenpai"
+      }
+    },
+    "best_efficiency_discard": "1m",
+    "best_evaluation": {
+      "discard": "1m",
+      "shanten": 1,
+      "ukeire": 111,
+      "effective_tiles": {
+        "3m": 4,
+        "4m": 4,
+        "5m": 4,
+        "6m": 4,
+        "7m": 4,
+        "8m": 4,
+        "9m": 4,
+        "1p": 4,
+        "2p": 4,
+        "5p": 4,
+        "6p": 4,
+        "7p": 4,
+        "8p": 4,
+        "9p": 4,
+        "1s": 4,
+        "2s": 4,
+        "3s": 4,
+        "4s": 4,
+        "6s": 4,
+        "7s": 4,
+        "8s": 4,
+        "9s": 3,
+        "S": 4,
+        "W": 4,
+        "N": 4,
+        "P": 4,
+        "F": 4,
+        "C": 4
+      },
+      "shanten_by_type": {
+        "regular": {
+          "available": true,
+          "shanten": 2
+        },
+        "chiitoitsu": {
+          "available": true,
+          "shanten": 1
+        },
+        "kokushi": {
+          "available": true,
+          "shanten": 10
+        },
+        "minimum": 1,
+        "best_routes": [
+          "chiitoitsu"
+        ]
+      },
+      "ukeire_by_type": {
+        "regular": {
+          "shanten": 2,
+          "available": true,
+          "ukeire": 18,
+          "effective_tiles": {
+            "2m": 2,
+            "2p": 4,
+            "3p": 2,
+            "4p": 2,
+            "5p": 4,
+            "5s": 2,
+            "E": 2
+          }
+        },
+        "chiitoitsu": {
+          "shanten": 1,
+          "available": true,
+          "ukeire": 111,
+          "effective_tiles": {
+            "3m": 4,
+            "4m": 4,
+            "5m": 4,
+            "6m": 4,
+            "7m": 4,
+            "8m": 4,
+            "9m": 4,
+            "1p": 4,
+            "2p": 4,
+            "5p": 4,
+            "6p": 4,
+            "7p": 4,
+            "8p": 4,
+            "9p": 4,
+            "1s": 4,
+            "2s": 4,
+            "3s": 4,
+            "4s": 4,
+            "6s": 4,
+            "7s": 4,
+            "8s": 4,
+            "9s": 3,
+            "S": 4,
+            "W": 4,
+            "N": 4,
+            "P": 4,
+            "F": 4,
+            "C": 4
+          }
+        },
+        "kokushi": {
+          "shanten": 10,
+          "available": true,
+          "ukeire": 43,
+          "effective_tiles": {
+            "9m": 4,
+            "1p": 4,
+            "9p": 4,
+            "1s": 4,
+            "9s": 3,
+            "S": 4,
+            "W": 4,
+            "N": 4,
+            "P": 4,
+            "F": 4,
+            "C": 4
+          }
+        }
+      },
+      "blocks": [
+        {
+          "route": "chiitoitsu",
+          "melds": [],
+          "taatsu": [],
+          "pairs": [
+            [
+              "1m",
+              "1m"
+            ],
+            [
+              "2m",
+              "2m"
+            ],
+            [
+              "3p",
+              "3p"
+            ],
+            [
+              "4p",
+              "4p"
+            ],
+            [
+              "5s",
+              "5s"
+            ],
+            [
+              "E",
+              "E"
+            ]
+          ],
+          "isolated": [
+            "1m"
+          ],
+          "open_melds": 0,
+          "block_count": 6,
+          "structural_shanten": 1
+        }
+      ],
+      "hand_dora": {
+        "dora_indicators": [
+          "9s"
+        ],
+        "indicator_dora_tiles": [
+          "1s"
+        ],
+        "aka_dora_han": 0,
+        "indicator_dora_han": 0,
+        "total_dora_han": 0,
+        "tiles": []
+      },
+      "own_discard_tiles_after_candidate": [
+        "1m"
+      ],
+      "yaku_analysis": {
+        "menzen": true,
+        "input_complete": true,
+        "has_established_yaku": false,
+        "opportunities": {
+          "yakuhai_E": {
+            "yaku": "yakuhai",
+            "feasibility": "possible",
+            "promising": true,
+            "guaranteed_on_completion": false,
+            "completed": null,
+            "supporting_tiles": [
+              "E",
+              "E"
+            ],
+            "obstructing_tiles": [],
+            "fixed_meld_indices": [],
+            "facts": [
+              "VALUE_HONOR_ROUTE_AVAILABLE"
+            ],
+            "metrics": {
+              "tile": "E",
+              "reasons": [
+                "round_wind",
+                "seat_wind"
+              ],
+              "han_if_completed": 2,
+              "concealed_count": 2,
+              "copies_needed": 1,
+              "live_copies": 2,
+              "structure_present": false
+            }
+          },
+          "tanyao": {
+            "yaku": "tanyao",
+            "feasibility": "unknown",
+            "promising": false,
+            "guaranteed_on_completion": false,
+            "completed": null,
+            "supporting_tiles": [
+              "2m",
+              "3p",
+              "4p",
+              "5s"
+            ],
+            "obstructing_tiles": [
+              "1m",
+              "1m",
+              "1m",
+              "E",
+              "E"
+            ],
+            "fixed_meld_indices": [],
+            "facts": [
+              "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+            ],
+            "metrics": {
+              "incompatible_concealed_tiles": 5,
+              "simple_concealed_tiles": 4,
+              "open_tanyao_enabled": true,
+              "yaku_shanten": null,
+              "yaku_ukeire": null
+            }
+          }
+        },
+        "errors": [],
+        "confirmed_yaku": [],
+        "established_components": [],
+        "yaku_tenpai": [],
+        "validated_complete_yaku": [],
+        "yaku": {
+          "chiitoitsu": {
+            "shanten": {
+              "value": 1,
+              "measurement": "exact"
+            },
+            "ukeire": {
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            },
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "exact",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "exact_transition",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "3m",
+                  "4m",
+                  "5m",
+                  "6m",
+                  "7m",
+                  "8m",
+                  "9m",
+                  "1p",
+                  "2p",
+                  "5p",
+                  "6p",
+                  "7p",
+                  "8p",
+                  "9p",
+                  "1s",
+                  "2s",
+                  "3s",
+                  "4s",
+                  "6s",
+                  "7s",
+                  "8s",
+                  "9s",
+                  "S",
+                  "W",
+                  "N",
+                  "P",
+                  "F",
+                  "C"
+                ],
+                "validation": "exact_transition",
+                "discard": "1m",
+                "yaku_shanten_after": 0
+              }
+            ],
+            "estimated_improving_draws": {},
+            "yaku_category": "menzen_only",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "pinfu": {
+            "shanten": {
+              "value": 2,
+              "measurement": "heuristic"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [
+              {
+                "type": "concealed_tile",
+                "severity": "removable",
+                "reason": "value_honor_cannot_be_pinfu_pair",
+                "tile": "E"
+              },
+              {
+                "type": "concealed_tile",
+                "severity": "removable",
+                "reason": "value_honor_cannot_be_pinfu_pair",
+                "tile": "E"
+              },
+              {
+                "type": "concealed_group",
+                "severity": "removable",
+                "reason": "triplet_must_be_restructured",
+                "tile": "1m"
+              }
+            ],
+            "route_state": "none",
+            "proof": {
+              "distance": "heuristic",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2p",
+                  "5p"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "E",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {
+              "2p": 4,
+              "5p": 4
+            },
+            "yaku_category": "menzen_only",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "sanankou": {
+            "shanten": {
+              "value": 2,
+              "measurement": "lower_bound"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "lower_bound",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "3p",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "2p",
+                  "3p",
+                  "4p",
+                  "5p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {
+              "2m": 2,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            },
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "suuankou": {
+            "shanten": {
+              "value": 2,
+              "measurement": "exact"
+            },
+            "ukeire": {
+              "2m": 2,
+              "3p": 2,
+              "4p": 2,
+              "5s": 2,
+              "E": 2
+            },
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "exact",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "exact_transition",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "exact_transition",
+                "discard": "3p",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "3p",
+                  "4p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "exact_transition",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {},
+            "yaku_category": "yakuman_menzen",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "toitoi": {
+            "shanten": {
+              "value": 2,
+              "measurement": "exact"
+            },
+            "ukeire": {
+              "2m": 2,
+              "3p": 2,
+              "4p": 2,
+              "5s": 2,
+              "E": 2
+            },
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "exact",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "exact_transition",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "exact_transition",
+                "discard": "3p",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "3p",
+                  "4p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "exact_transition",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              }
+            ],
+            "estimated_improving_draws": {},
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "yakuhai_E": {
+            "shanten": {
+              "value": 2,
+              "measurement": "lower_bound"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "lower_bound",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "live",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "estimated_metric_improvement",
+            "ukeire_witnesses": [],
+            "estimated_improving_draws": {
+              "E": 2
+            },
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "iipeikou": {
+            "shanten": {
+              "value": 3,
+              "measurement": "heuristic"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "heuristic",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [
+              {
+                "draws": [
+                  "2m"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "3p",
+                "yaku_shanten_after": 2
+              },
+              {
+                "draws": [
+                  "3m"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "1m",
+                "yaku_shanten_after": 2
+              },
+              {
+                "draws": [
+                  "2p",
+                  "5p"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "2m",
+                "yaku_shanten_after": 1
+              },
+              {
+                "draws": [
+                  "3p",
+                  "4p",
+                  "5s",
+                  "E"
+                ],
+                "validation": "estimated_metric_improvement",
+                "discard": "2m",
+                "yaku_shanten_after": 2
+              }
+            ],
+            "estimated_improving_draws": {
+              "2m": 2,
+              "3m": 4,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            },
+            "yaku_category": "menzen_only",
+            "menzen_required": true,
+            "open_allowed": false,
+            "open_han_reduced": false,
+            "structural": true
+          },
+          "sankantsu": {
+            "shanten": {
+              "value": 3,
+              "measurement": "heuristic"
+            },
+            "ukeire": {},
+            "feasibility": "possible",
+            "yaku_blockers": [],
+            "route_state": "none",
+            "proof": {
+              "distance": "heuristic",
+              "validation": "unvalidated"
+            },
+            "outcome_scope": {
+              "ron": "unknown",
+              "tsumo": "unknown"
+            },
+            "availability": "unknown",
+            "guarantee": "none",
+            "legacy_feasibility": "possible",
+            "ukeire_kind": "none",
+            "ukeire_witnesses": [],
+            "estimated_improving_draws": {},
+            "yaku_category": "open_same",
+            "menzen_required": false,
+            "open_allowed": true,
+            "open_han_reduced": false,
+            "structural": true
+          }
+        },
+        "route_evidence_status": "complete",
+        "route_filter": {
+          "max_extra_shanten": 1,
+          "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+          "preserves_established_and_impossible_routes": true
+        }
+      },
+      "tenpai_legality": {
+        "structural_tenpai": false,
+        "waits": {},
+        "status": "not_tenpai"
+      }
+    },
+    "equally_efficient_discards": [
+      "1m"
+    ],
+    "actual_shanten_minus_alternative": 0,
+    "actual_ukeire_minus_alternative": 0,
+    "all_candidates": [
+      {
+        "discard": "1m",
+        "shanten": 1,
+        "ukeire": 111,
+        "effective_tiles": {
+          "3m": 4,
+          "4m": 4,
+          "5m": 4,
+          "6m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "5p": 4,
+          "6p": 4,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "4s": 4,
+          "6s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 1
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 1,
+          "best_routes": [
+            "chiitoitsu"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 18,
+            "effective_tiles": {
+              "2m": 2,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 1,
+            "available": true,
+            "ukeire": 111,
+            "effective_tiles": {
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "9m": 4,
+              "1p": 4,
+              "9p": 4,
+              "1s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "chiitoitsu",
+            "melds": [],
+            "taatsu": [],
+            "pairs": [
+              [
+                "1m",
+                "1m"
+              ],
+              [
+                "2m",
+                "2m"
+              ],
+              [
+                "3p",
+                "3p"
+              ],
+              [
+                "4p",
+                "4p"
+              ],
+              [
+                "5s",
+                "5s"
+              ],
+              [
+                "E",
+                "E"
+              ]
+            ],
+            "isolated": [
+              "1m"
+            ],
+            "open_melds": 0,
+            "block_count": 6,
+            "structural_shanten": 1
+          }
+        ],
+        "hand_dora": {
+          "dora_indicators": [
+            "9s"
+          ],
+          "indicator_dora_tiles": [
+            "1s"
+          ],
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "total_dora_han": 0,
+          "tiles": []
+        },
+        "own_discard_tiles_after_candidate": [
+          "1m"
+        ],
+        "yaku_analysis": {
+          "menzen": true,
+          "input_complete": true,
+          "has_established_yaku": false,
+          "opportunities": {
+            "yakuhai_E": {
+              "yaku": "yakuhai",
+              "feasibility": "possible",
+              "promising": true,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "E",
+                "E"
+              ],
+              "obstructing_tiles": [],
+              "fixed_meld_indices": [],
+              "facts": [
+                "VALUE_HONOR_ROUTE_AVAILABLE"
+              ],
+              "metrics": {
+                "tile": "E",
+                "reasons": [
+                  "round_wind",
+                  "seat_wind"
+                ],
+                "han_if_completed": 2,
+                "concealed_count": 2,
+                "copies_needed": 1,
+                "live_copies": 2,
+                "structure_present": false
+              }
+            },
+            "tanyao": {
+              "yaku": "tanyao",
+              "feasibility": "unknown",
+              "promising": false,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "2m",
+                "3p",
+                "4p",
+                "5s"
+              ],
+              "obstructing_tiles": [
+                "1m",
+                "1m",
+                "1m",
+                "E",
+                "E"
+              ],
+              "fixed_meld_indices": [],
+              "facts": [
+                "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+              ],
+              "metrics": {
+                "incompatible_concealed_tiles": 5,
+                "simple_concealed_tiles": 4,
+                "open_tanyao_enabled": true,
+                "yaku_shanten": null,
+                "yaku_ukeire": null
+              }
+            }
+          },
+          "errors": [],
+          "confirmed_yaku": [],
+          "established_components": [],
+          "yaku_tenpai": [],
+          "validated_complete_yaku": [],
+          "yaku": {
+            "chiitoitsu": {
+              "shanten": {
+                "value": 1,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "3m": 4,
+                "4m": 4,
+                "5m": 4,
+                "6m": 4,
+                "7m": 4,
+                "8m": 4,
+                "9m": 4,
+                "1p": 4,
+                "2p": 4,
+                "5p": 4,
+                "6p": 4,
+                "7p": 4,
+                "8p": 4,
+                "9p": 4,
+                "1s": 4,
+                "2s": 4,
+                "3s": 4,
+                "4s": 4,
+                "6s": 4,
+                "7s": 4,
+                "8s": 4,
+                "9s": 3,
+                "S": 4,
+                "W": 4,
+                "N": 4,
+                "P": 4,
+                "F": 4,
+                "C": 4
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "3m",
+                    "4m",
+                    "5m",
+                    "6m",
+                    "7m",
+                    "8m",
+                    "9m",
+                    "1p",
+                    "2p",
+                    "5p",
+                    "6p",
+                    "7p",
+                    "8p",
+                    "9p",
+                    "1s",
+                    "2s",
+                    "3s",
+                    "4s",
+                    "6s",
+                    "7s",
+                    "8s",
+                    "9s",
+                    "S",
+                    "W",
+                    "N",
+                    "P",
+                    "F",
+                    "C"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "1m",
+                  "yaku_shanten_after": 0
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "pinfu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_group",
+                  "severity": "removable",
+                  "reason": "triplet_must_be_restructured",
+                  "tile": "1m"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2p",
+                    "5p"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "E",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {
+                "2p": 4,
+                "5p": 4
+              },
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sanankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "3p",
+                  "yaku_shanten_after": 1
+                },
+                {
+                  "draws": [
+                    "2p",
+                    "3p",
+                    "4p",
+                    "5p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "2m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {
+                "2m": 2,
+                "2p": 4,
+                "3p": 2,
+                "4p": 2,
+                "5p": 4,
+                "5s": 2,
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suuankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "2m": 2,
+                "3p": 2,
+                "4p": 2,
+                "5s": 2,
+                "E": 2
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "3p",
+                  "yaku_shanten_after": 1
+                },
+                {
+                  "draws": [
+                    "3p",
+                    "4p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "2m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_menzen",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "toitoi": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "2m": 2,
+                "3p": 2,
+                "4p": 2,
+                "5s": 2,
+                "E": 2
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "3p",
+                  "yaku_shanten_after": 1
+                },
+                {
+                  "draws": [
+                    "3p",
+                    "4p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "2m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "yakuhai_E": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "live",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "estimated_metric_improvement",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "iipeikou": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "3p",
+                  "yaku_shanten_after": 2
+                },
+                {
+                  "draws": [
+                    "3m"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "1m",
+                  "yaku_shanten_after": 2
+                },
+                {
+                  "draws": [
+                    "2p",
+                    "5p"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "2m",
+                  "yaku_shanten_after": 1
+                },
+                {
+                  "draws": [
+                    "3p",
+                    "4p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "2m",
+                  "yaku_shanten_after": 2
+                }
+              ],
+              "estimated_improving_draws": {
+                "2m": 2,
+                "3m": 4,
+                "2p": 4,
+                "3p": 2,
+                "4p": 2,
+                "5p": 4,
+                "5s": 2,
+                "E": 2
+              },
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sankantsu": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            }
+          },
+          "route_evidence_status": "complete",
+          "route_filter": {
+            "max_extra_shanten": 1,
+            "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+            "preserves_established_and_impossible_routes": true
+          }
+        },
+        "tenpai_legality": {
+          "structural_tenpai": false,
+          "waits": {},
+          "status": "not_tenpai"
+        }
+      },
+      {
+        "discard": "2m",
+        "shanten": 2,
+        "ukeire": 121,
+        "effective_tiles": {
+          "2m": 2,
+          "3m": 4,
+          "4m": 4,
+          "5m": 4,
+          "6m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "3p": 2,
+          "4p": 2,
+          "5p": 4,
+          "6p": 4,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "4s": 4,
+          "5s": 2,
+          "6s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "E": 2,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 2
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular",
+            "chiitoitsu"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 20,
+            "effective_tiles": {
+              "3m": 4,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 113,
+            "effective_tiles": {
+              "2m": 2,
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "9m": 4,
+              "1p": 4,
+              "9p": 4,
+              "1s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "1m",
+                "1m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "1m",
+                "2m"
+              ]
+            ],
+            "pairs": [
+              [
+                "3p",
+                "3p"
+              ],
+              [
+                "4p",
+                "4p"
+              ],
+              [
+                "5s",
+                "5s"
+              ],
+              [
+                "E",
+                "E"
+              ]
+            ],
+            "isolated": [],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "hand_dora": {
+          "dora_indicators": [
+            "9s"
+          ],
+          "indicator_dora_tiles": [
+            "1s"
+          ],
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "total_dora_han": 0,
+          "tiles": []
+        },
+        "own_discard_tiles_after_candidate": [
+          "2m"
+        ],
+        "yaku_analysis": {
+          "menzen": true,
+          "input_complete": true,
+          "has_established_yaku": false,
+          "opportunities": {
+            "yakuhai_E": {
+              "yaku": "yakuhai",
+              "feasibility": "possible",
+              "promising": true,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "E",
+                "E"
+              ],
+              "obstructing_tiles": [],
+              "fixed_meld_indices": [],
+              "facts": [
+                "VALUE_HONOR_ROUTE_AVAILABLE"
+              ],
+              "metrics": {
+                "tile": "E",
+                "reasons": [
+                  "round_wind",
+                  "seat_wind"
+                ],
+                "han_if_completed": 2,
+                "concealed_count": 2,
+                "copies_needed": 1,
+                "live_copies": 2,
+                "structure_present": false
+              }
+            },
+            "tanyao": {
+              "yaku": "tanyao",
+              "feasibility": "unknown",
+              "promising": false,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "2m",
+                "3p",
+                "4p",
+                "5s"
+              ],
+              "obstructing_tiles": [
+                "1m",
+                "1m",
+                "1m",
+                "1m",
+                "E",
+                "E"
+              ],
+              "fixed_meld_indices": [],
+              "facts": [
+                "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+              ],
+              "metrics": {
+                "incompatible_concealed_tiles": 6,
+                "simple_concealed_tiles": 4,
+                "open_tanyao_enabled": true,
+                "yaku_shanten": null,
+                "yaku_ukeire": null
+              }
+            }
+          },
+          "errors": [],
+          "confirmed_yaku": [],
+          "established_components": [],
+          "yaku_tenpai": [],
+          "validated_complete_yaku": [],
+          "yaku": {
+            "chiitoitsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "2m": 2,
+                "3m": 4,
+                "4m": 4,
+                "5m": 4,
+                "6m": 4,
+                "7m": 4,
+                "8m": 4,
+                "9m": 4,
+                "1p": 4,
+                "2p": 4,
+                "5p": 4,
+                "6p": 4,
+                "7p": 4,
+                "8p": 4,
+                "9p": 4,
+                "1s": 4,
+                "2s": 4,
+                "3s": 4,
+                "4s": 4,
+                "6s": 4,
+                "7s": 4,
+                "8s": 4,
+                "9s": 3,
+                "S": 4,
+                "W": 4,
+                "N": 4,
+                "P": 4,
+                "F": 4,
+                "C": 4
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m",
+                    "3m",
+                    "4m",
+                    "5m",
+                    "6m",
+                    "7m",
+                    "8m",
+                    "9m",
+                    "1p",
+                    "2p",
+                    "5p",
+                    "6p",
+                    "7p",
+                    "8p",
+                    "9p",
+                    "1s",
+                    "2s",
+                    "3s",
+                    "4s",
+                    "6s",
+                    "7s",
+                    "8s",
+                    "9s",
+                    "S",
+                    "W",
+                    "N",
+                    "P",
+                    "F",
+                    "C"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "pinfu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_group",
+                  "severity": "removable",
+                  "reason": "triplet_must_be_restructured",
+                  "tile": "1m"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "3m",
+                    "2p",
+                    "5p"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "E",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {
+                "3m": 4,
+                "2p": 4,
+                "5p": 4
+              },
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sanankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "3m"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "3p",
+                  "yaku_shanten_after": 1
+                },
+                {
+                  "draws": [
+                    "2p",
+                    "3p",
+                    "4p",
+                    "5p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {
+                "3m": 4,
+                "2p": 4,
+                "3p": 2,
+                "4p": 2,
+                "5p": 4,
+                "5s": 2,
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sankantsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suuankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "3p": 2,
+                "4p": 2,
+                "5s": 2,
+                "E": 2
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "3p",
+                    "4p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_menzen",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "toitoi": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "3p": 2,
+                "4p": 2,
+                "5s": 2,
+                "E": 2
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "3p",
+                    "4p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "yakuhai_E": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "live",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "estimated_metric_improvement",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "iipeikou": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "3m"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "3p",
+                  "yaku_shanten_after": 2
+                },
+                {
+                  "draws": [
+                    "2p",
+                    "5p"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                },
+                {
+                  "draws": [
+                    "3p",
+                    "4p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "1m",
+                  "yaku_shanten_after": 2
+                }
+              ],
+              "estimated_improving_draws": {
+                "3m": 4,
+                "2p": 4,
+                "3p": 2,
+                "4p": 2,
+                "5p": 4,
+                "5s": 2,
+                "E": 2
+              },
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suukantsu": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_open",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            }
+          },
+          "route_evidence_status": "complete",
+          "route_filter": {
+            "max_extra_shanten": 1,
+            "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+            "preserves_established_and_impossible_routes": true
+          }
+        },
+        "tenpai_legality": {
+          "structural_tenpai": false,
+          "waits": {},
+          "status": "not_tenpai"
+        }
+      },
+      {
+        "discard": "3p",
+        "shanten": 2,
+        "ukeire": 121,
+        "effective_tiles": {
+          "2m": 2,
+          "3m": 4,
+          "4m": 4,
+          "5m": 4,
+          "6m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "3p": 2,
+          "4p": 2,
+          "5p": 4,
+          "6p": 4,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "4s": 4,
+          "5s": 2,
+          "6s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "E": 2,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 2
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular",
+            "chiitoitsu"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 20,
+            "effective_tiles": {
+              "2m": 2,
+              "3m": 4,
+              "2p": 4,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 113,
+            "effective_tiles": {
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "3p": 2,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "9m": 4,
+              "1p": 4,
+              "9p": 4,
+              "1s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "1m",
+                "1m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "1m",
+                "2m"
+              ],
+              [
+                "3p",
+                "4p"
+              ]
+            ],
+            "pairs": [
+              [
+                "5s",
+                "5s"
+              ],
+              [
+                "E",
+                "E"
+              ]
+            ],
+            "isolated": [
+              "2m",
+              "4p"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "hand_dora": {
+          "dora_indicators": [
+            "9s"
+          ],
+          "indicator_dora_tiles": [
+            "1s"
+          ],
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "total_dora_han": 0,
+          "tiles": []
+        },
+        "own_discard_tiles_after_candidate": [
+          "3p"
+        ],
+        "yaku_analysis": {
+          "menzen": true,
+          "input_complete": true,
+          "has_established_yaku": false,
+          "opportunities": {
+            "yakuhai_E": {
+              "yaku": "yakuhai",
+              "feasibility": "possible",
+              "promising": true,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "E",
+                "E"
+              ],
+              "obstructing_tiles": [],
+              "fixed_meld_indices": [],
+              "facts": [
+                "VALUE_HONOR_ROUTE_AVAILABLE"
+              ],
+              "metrics": {
+                "tile": "E",
+                "reasons": [
+                  "round_wind",
+                  "seat_wind"
+                ],
+                "han_if_completed": 2,
+                "concealed_count": 2,
+                "copies_needed": 1,
+                "live_copies": 2,
+                "structure_present": false
+              }
+            },
+            "tanyao": {
+              "yaku": "tanyao",
+              "feasibility": "unknown",
+              "promising": false,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "2m",
+                "3p",
+                "4p",
+                "5s"
+              ],
+              "obstructing_tiles": [
+                "1m",
+                "1m",
+                "1m",
+                "1m",
+                "E",
+                "E"
+              ],
+              "fixed_meld_indices": [],
+              "facts": [
+                "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+              ],
+              "metrics": {
+                "incompatible_concealed_tiles": 6,
+                "simple_concealed_tiles": 4,
+                "open_tanyao_enabled": true,
+                "yaku_shanten": null,
+                "yaku_ukeire": null
+              }
+            }
+          },
+          "errors": [],
+          "confirmed_yaku": [],
+          "established_components": [],
+          "yaku_tenpai": [],
+          "validated_complete_yaku": [],
+          "yaku": {
+            "chiitoitsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "pinfu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_group",
+                  "severity": "removable",
+                  "reason": "triplet_must_be_restructured",
+                  "tile": "1m"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sanankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sankantsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suuankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_menzen",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "toitoi": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "yakuhai_E": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "live",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "estimated_metric_improvement",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "iipeikou": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suukantsu": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_open",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            }
+          },
+          "route_evidence_status": "complete",
+          "route_filter": {
+            "max_extra_shanten": 1,
+            "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+            "preserves_established_and_impossible_routes": true
+          }
+        },
+        "tenpai_legality": {
+          "structural_tenpai": false,
+          "waits": {},
+          "status": "not_tenpai"
+        }
+      },
+      {
+        "discard": "4p",
+        "shanten": 2,
+        "ukeire": 121,
+        "effective_tiles": {
+          "2m": 2,
+          "3m": 4,
+          "4m": 4,
+          "5m": 4,
+          "6m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "3p": 2,
+          "4p": 2,
+          "5p": 4,
+          "6p": 4,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "4s": 4,
+          "5s": 2,
+          "6s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "E": 2,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 2
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular",
+            "chiitoitsu"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 20,
+            "effective_tiles": {
+              "2m": 2,
+              "3m": 4,
+              "2p": 4,
+              "3p": 2,
+              "5p": 4,
+              "5s": 2,
+              "E": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 113,
+            "effective_tiles": {
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "4p": 2,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "9m": 4,
+              "1p": 4,
+              "9p": 4,
+              "1s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "1m",
+                "1m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "1m",
+                "2m"
+              ]
+            ],
+            "pairs": [
+              [
+                "3p",
+                "3p"
+              ],
+              [
+                "5s",
+                "5s"
+              ],
+              [
+                "E",
+                "E"
+              ]
+            ],
+            "isolated": [
+              "2m",
+              "4p"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "hand_dora": {
+          "dora_indicators": [
+            "9s"
+          ],
+          "indicator_dora_tiles": [
+            "1s"
+          ],
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "total_dora_han": 0,
+          "tiles": []
+        },
+        "own_discard_tiles_after_candidate": [
+          "4p"
+        ],
+        "yaku_analysis": {
+          "menzen": true,
+          "input_complete": true,
+          "has_established_yaku": false,
+          "opportunities": {
+            "yakuhai_E": {
+              "yaku": "yakuhai",
+              "feasibility": "possible",
+              "promising": true,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "E",
+                "E"
+              ],
+              "obstructing_tiles": [],
+              "fixed_meld_indices": [],
+              "facts": [
+                "VALUE_HONOR_ROUTE_AVAILABLE"
+              ],
+              "metrics": {
+                "tile": "E",
+                "reasons": [
+                  "round_wind",
+                  "seat_wind"
+                ],
+                "han_if_completed": 2,
+                "concealed_count": 2,
+                "copies_needed": 1,
+                "live_copies": 2,
+                "structure_present": false
+              }
+            },
+            "tanyao": {
+              "yaku": "tanyao",
+              "feasibility": "unknown",
+              "promising": false,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "2m",
+                "3p",
+                "4p",
+                "5s"
+              ],
+              "obstructing_tiles": [
+                "1m",
+                "1m",
+                "1m",
+                "1m",
+                "E",
+                "E"
+              ],
+              "fixed_meld_indices": [],
+              "facts": [
+                "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+              ],
+              "metrics": {
+                "incompatible_concealed_tiles": 6,
+                "simple_concealed_tiles": 4,
+                "open_tanyao_enabled": true,
+                "yaku_shanten": null,
+                "yaku_ukeire": null
+              }
+            }
+          },
+          "errors": [],
+          "confirmed_yaku": [],
+          "established_components": [],
+          "yaku_tenpai": [],
+          "validated_complete_yaku": [],
+          "yaku": {
+            "chiitoitsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "3m": 4,
+                "4m": 4,
+                "5m": 4,
+                "6m": 4,
+                "7m": 4,
+                "8m": 4,
+                "9m": 4,
+                "1p": 4,
+                "2p": 4,
+                "4p": 2,
+                "5p": 4,
+                "6p": 4,
+                "7p": 4,
+                "8p": 4,
+                "9p": 4,
+                "1s": 4,
+                "2s": 4,
+                "3s": 4,
+                "4s": 4,
+                "6s": 4,
+                "7s": 4,
+                "8s": 4,
+                "9s": 3,
+                "S": 4,
+                "W": 4,
+                "N": 4,
+                "P": 4,
+                "F": 4,
+                "C": 4
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "3m",
+                    "4m",
+                    "5m",
+                    "6m",
+                    "7m",
+                    "8m",
+                    "9m",
+                    "1p",
+                    "2p",
+                    "4p",
+                    "5p",
+                    "6p",
+                    "7p",
+                    "8p",
+                    "9p",
+                    "1s",
+                    "2s",
+                    "3s",
+                    "4s",
+                    "6s",
+                    "7s",
+                    "8s",
+                    "9s",
+                    "S",
+                    "W",
+                    "N",
+                    "P",
+                    "F",
+                    "C"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "pinfu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_group",
+                  "severity": "removable",
+                  "reason": "triplet_must_be_restructured",
+                  "tile": "1m"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sanankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m",
+                    "2p",
+                    "3p",
+                    "5p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                },
+                {
+                  "draws": [
+                    "3m"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "2m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {
+                "2m": 2,
+                "3m": 4,
+                "2p": 4,
+                "3p": 2,
+                "5p": 4,
+                "5s": 2,
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sankantsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suuankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "2m": 2,
+                "3p": 2,
+                "5s": 2,
+                "E": 2
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m",
+                    "3p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_menzen",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "toitoi": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {
+                "2m": 2,
+                "3p": 2,
+                "5s": 2,
+                "E": 2
+              },
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "exact_transition",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m",
+                    "3p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "exact_transition",
+                  "discard": "1m",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "yakuhai_E": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "live",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "estimated_metric_improvement",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "chanta": {
+              "shanten": {
+                "value": 3,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "incompatible_with_outside_hand",
+                  "tile": "4p"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "incompatible_with_outside_hand",
+                  "tile": "5s"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "incompatible_with_outside_hand",
+                  "tile": "5s"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m",
+                    "3m",
+                    "7m",
+                    "8m",
+                    "9m",
+                    "1p",
+                    "2p",
+                    "3p",
+                    "7p",
+                    "8p",
+                    "9p",
+                    "1s",
+                    "2s",
+                    "3s",
+                    "7s",
+                    "8s",
+                    "9s",
+                    "E",
+                    "S",
+                    "W",
+                    "N",
+                    "P",
+                    "F",
+                    "C"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "4p",
+                  "yaku_shanten_after": 2
+                }
+              ],
+              "estimated_improving_draws": {
+                "2m": 2,
+                "3m": 4,
+                "7m": 4,
+                "8m": 4,
+                "9m": 4,
+                "1p": 4,
+                "2p": 4,
+                "3p": 2,
+                "7p": 4,
+                "8p": 4,
+                "9p": 4,
+                "1s": 4,
+                "2s": 4,
+                "3s": 4,
+                "7s": 4,
+                "8s": 4,
+                "9s": 3,
+                "E": 2,
+                "S": 4,
+                "W": 4,
+                "N": 4,
+                "P": 4,
+                "F": 4,
+                "C": 4
+              },
+              "yaku_category": "open_reduced",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": true,
+              "structural": true
+            },
+            "iipeikou": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [
+                {
+                  "draws": [
+                    "2m",
+                    "2p",
+                    "3p",
+                    "5p",
+                    "5s",
+                    "E"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "1m",
+                  "yaku_shanten_after": 2
+                },
+                {
+                  "draws": [
+                    "3m"
+                  ],
+                  "validation": "estimated_metric_improvement",
+                  "discard": "3p",
+                  "yaku_shanten_after": 1
+                }
+              ],
+              "estimated_improving_draws": {
+                "2m": 2,
+                "3m": 4,
+                "2p": 4,
+                "3p": 2,
+                "5p": 4,
+                "5s": 2,
+                "E": 2
+              },
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suukantsu": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_open",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            }
+          },
+          "route_evidence_status": "complete",
+          "route_filter": {
+            "max_extra_shanten": 1,
+            "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+            "preserves_established_and_impossible_routes": true
+          }
+        },
+        "tenpai_legality": {
+          "structural_tenpai": false,
+          "waits": {},
+          "status": "not_tenpai"
+        }
+      },
+      {
+        "discard": "5s",
+        "shanten": 2,
+        "ukeire": 121,
+        "effective_tiles": {
+          "2m": 2,
+          "3m": 4,
+          "4m": 4,
+          "5m": 4,
+          "6m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "3p": 2,
+          "4p": 2,
+          "5p": 4,
+          "6p": 4,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "4s": 4,
+          "5s": 2,
+          "6s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "E": 2,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 2
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular",
+            "chiitoitsu"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 20,
+            "effective_tiles": {
+              "2m": 2,
+              "3m": 4,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "E": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 113,
+            "effective_tiles": {
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "5s": 2,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "9m": 4,
+              "1p": 4,
+              "9p": 4,
+              "1s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "1m",
+                "1m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "1m",
+                "2m"
+              ]
+            ],
+            "pairs": [
+              [
+                "3p",
+                "3p"
+              ],
+              [
+                "4p",
+                "4p"
+              ],
+              [
+                "E",
+                "E"
+              ]
+            ],
+            "isolated": [
+              "2m",
+              "5s"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "hand_dora": {
+          "dora_indicators": [
+            "9s"
+          ],
+          "indicator_dora_tiles": [
+            "1s"
+          ],
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "total_dora_han": 0,
+          "tiles": []
+        },
+        "own_discard_tiles_after_candidate": [
+          "5s"
+        ],
+        "yaku_analysis": {
+          "menzen": true,
+          "input_complete": true,
+          "has_established_yaku": false,
+          "opportunities": {
+            "yakuhai_E": {
+              "yaku": "yakuhai",
+              "feasibility": "possible",
+              "promising": true,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "E",
+                "E"
+              ],
+              "obstructing_tiles": [],
+              "fixed_meld_indices": [],
+              "facts": [
+                "VALUE_HONOR_ROUTE_AVAILABLE"
+              ],
+              "metrics": {
+                "tile": "E",
+                "reasons": [
+                  "round_wind",
+                  "seat_wind"
+                ],
+                "han_if_completed": 2,
+                "concealed_count": 2,
+                "copies_needed": 1,
+                "live_copies": 2,
+                "structure_present": false
+              }
+            },
+            "tanyao": {
+              "yaku": "tanyao",
+              "feasibility": "unknown",
+              "promising": false,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "2m",
+                "3p",
+                "4p",
+                "5s"
+              ],
+              "obstructing_tiles": [
+                "1m",
+                "1m",
+                "1m",
+                "1m",
+                "E",
+                "E"
+              ],
+              "fixed_meld_indices": [],
+              "facts": [
+                "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+              ],
+              "metrics": {
+                "incompatible_concealed_tiles": 6,
+                "simple_concealed_tiles": 4,
+                "open_tanyao_enabled": true,
+                "yaku_shanten": null,
+                "yaku_ukeire": null
+              }
+            }
+          },
+          "errors": [],
+          "confirmed_yaku": [],
+          "established_components": [],
+          "yaku_tenpai": [],
+          "validated_complete_yaku": [],
+          "yaku": {
+            "chiitoitsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "pinfu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_group",
+                  "severity": "removable",
+                  "reason": "triplet_must_be_restructured",
+                  "tile": "1m"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sanankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sankantsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suuankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_menzen",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "toitoi": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "yakuhai_E": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "live",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "estimated_metric_improvement",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {
+                "E": 2
+              },
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "chanta": {
+              "shanten": {
+                "value": 3,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "incompatible_with_outside_hand",
+                  "tile": "4p"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "incompatible_with_outside_hand",
+                  "tile": "4p"
+                },
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "incompatible_with_outside_hand",
+                  "tile": "5s"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_reduced",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": true,
+              "structural": true
+            },
+            "iipeikou": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suukantsu": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_open",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            }
+          },
+          "route_evidence_status": "complete",
+          "route_filter": {
+            "max_extra_shanten": 1,
+            "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+            "preserves_established_and_impossible_routes": true
+          }
+        },
+        "tenpai_legality": {
+          "structural_tenpai": false,
+          "waits": {},
+          "status": "not_tenpai"
+        }
+      },
+      {
+        "discard": "E",
+        "shanten": 2,
+        "ukeire": 121,
+        "effective_tiles": {
+          "2m": 2,
+          "3m": 4,
+          "4m": 4,
+          "5m": 4,
+          "6m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "3p": 2,
+          "4p": 2,
+          "5p": 4,
+          "6p": 4,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "4s": 4,
+          "5s": 2,
+          "6s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "E": 2,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "shanten_by_type": {
+          "regular": {
+            "available": true,
+            "shanten": 2
+          },
+          "chiitoitsu": {
+            "available": true,
+            "shanten": 2
+          },
+          "kokushi": {
+            "available": true,
+            "shanten": 10
+          },
+          "minimum": 2,
+          "best_routes": [
+            "regular",
+            "chiitoitsu"
+          ]
+        },
+        "ukeire_by_type": {
+          "regular": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 20,
+            "effective_tiles": {
+              "2m": 2,
+              "3m": 4,
+              "2p": 4,
+              "3p": 2,
+              "4p": 2,
+              "5p": 4,
+              "5s": 2
+            }
+          },
+          "chiitoitsu": {
+            "shanten": 2,
+            "available": true,
+            "ukeire": 113,
+            "effective_tiles": {
+              "3m": 4,
+              "4m": 4,
+              "5m": 4,
+              "6m": 4,
+              "7m": 4,
+              "8m": 4,
+              "9m": 4,
+              "1p": 4,
+              "2p": 4,
+              "5p": 4,
+              "6p": 4,
+              "7p": 4,
+              "8p": 4,
+              "9p": 4,
+              "1s": 4,
+              "2s": 4,
+              "3s": 4,
+              "4s": 4,
+              "6s": 4,
+              "7s": 4,
+              "8s": 4,
+              "9s": 3,
+              "E": 2,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          },
+          "kokushi": {
+            "shanten": 10,
+            "available": true,
+            "ukeire": 43,
+            "effective_tiles": {
+              "9m": 4,
+              "1p": 4,
+              "9p": 4,
+              "1s": 4,
+              "9s": 3,
+              "S": 4,
+              "W": 4,
+              "N": 4,
+              "P": 4,
+              "F": 4,
+              "C": 4
+            }
+          }
+        },
+        "blocks": [
+          {
+            "route": "regular",
+            "melds": [
+              [
+                "1m",
+                "1m",
+                "1m"
+              ]
+            ],
+            "taatsu": [
+              [
+                "1m",
+                "2m"
+              ]
+            ],
+            "pairs": [
+              [
+                "3p",
+                "3p"
+              ],
+              [
+                "4p",
+                "4p"
+              ],
+              [
+                "5s",
+                "5s"
+              ]
+            ],
+            "isolated": [
+              "2m",
+              "E"
+            ],
+            "open_melds": 0,
+            "block_count": 5,
+            "structural_shanten": 2
+          }
+        ],
+        "hand_dora": {
+          "dora_indicators": [
+            "9s"
+          ],
+          "indicator_dora_tiles": [
+            "1s"
+          ],
+          "aka_dora_han": 0,
+          "indicator_dora_han": 0,
+          "total_dora_han": 0,
+          "tiles": []
+        },
+        "own_discard_tiles_after_candidate": [
+          "E"
+        ],
+        "yaku_analysis": {
+          "menzen": true,
+          "input_complete": true,
+          "has_established_yaku": false,
+          "opportunities": {
+            "yakuhai_E": {
+              "yaku": "yakuhai",
+              "feasibility": "possible",
+              "promising": false,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "E"
+              ],
+              "obstructing_tiles": [],
+              "fixed_meld_indices": [],
+              "facts": [
+                "VALUE_HONOR_ROUTE_AVAILABLE"
+              ],
+              "metrics": {
+                "tile": "E",
+                "reasons": [
+                  "round_wind",
+                  "seat_wind"
+                ],
+                "han_if_completed": 2,
+                "concealed_count": 1,
+                "copies_needed": 2,
+                "live_copies": 2,
+                "structure_present": false
+              }
+            },
+            "tanyao": {
+              "yaku": "tanyao",
+              "feasibility": "unknown",
+              "promising": false,
+              "guaranteed_on_completion": false,
+              "completed": null,
+              "supporting_tiles": [
+                "2m",
+                "3p",
+                "4p",
+                "5s"
+              ],
+              "obstructing_tiles": [
+                "1m",
+                "1m",
+                "1m",
+                "1m",
+                "E"
+              ],
+              "fixed_meld_indices": [],
+              "facts": [
+                "CONCEALED_OUTSIDE_TILES_DISCARDABLE"
+              ],
+              "metrics": {
+                "incompatible_concealed_tiles": 5,
+                "simple_concealed_tiles": 4,
+                "open_tanyao_enabled": true,
+                "yaku_shanten": null,
+                "yaku_ukeire": null
+              }
+            }
+          },
+          "errors": [],
+          "confirmed_yaku": [],
+          "established_components": [],
+          "yaku_tenpai": [],
+          "validated_complete_yaku": [],
+          "yaku": {
+            "chiitoitsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "pinfu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [
+                {
+                  "type": "concealed_tile",
+                  "severity": "removable",
+                  "reason": "value_honor_cannot_be_pinfu_pair",
+                  "tile": "E"
+                },
+                {
+                  "type": "concealed_group",
+                  "severity": "removable",
+                  "reason": "triplet_must_be_restructured",
+                  "tile": "1m"
+                }
+              ],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sanankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "sankantsu": {
+              "shanten": {
+                "value": 2,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suuankou": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_menzen",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "toitoi": {
+              "shanten": {
+                "value": 2,
+                "measurement": "exact"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "exact",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "yakuhai_E": {
+              "shanten": {
+                "value": 2,
+                "measurement": "lower_bound"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "lower_bound",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "open_same",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "iipeikou": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "menzen_only",
+              "menzen_required": true,
+              "open_allowed": false,
+              "open_han_reduced": false,
+              "structural": true
+            },
+            "suukantsu": {
+              "shanten": {
+                "value": 3,
+                "measurement": "heuristic"
+              },
+              "ukeire": {},
+              "feasibility": "possible",
+              "yaku_blockers": [],
+              "route_state": "none",
+              "proof": {
+                "distance": "heuristic",
+                "validation": "unvalidated"
+              },
+              "outcome_scope": {
+                "ron": "unknown",
+                "tsumo": "unknown"
+              },
+              "availability": "unknown",
+              "guarantee": "none",
+              "legacy_feasibility": "possible",
+              "ukeire_kind": "none",
+              "ukeire_witnesses": [],
+              "estimated_improving_draws": {},
+              "yaku_category": "yakuman_open",
+              "menzen_required": false,
+              "open_allowed": true,
+              "open_han_reduced": false,
+              "structural": true
+            }
+          },
+          "route_evidence_status": "complete",
+          "route_filter": {
+            "max_extra_shanten": 1,
+            "formula": "yaku_shanten - ordinary_shanten <= max_extra_shanten",
+            "preserves_established_and_impossible_routes": true
+          }
+        },
+        "tenpai_legality": {
+          "structural_tenpai": false,
+          "waits": {},
+          "status": "not_tenpai"
+        }
+      }
+    ],
+    "yaku_discard_recommendations": {
+      "chiitoitsu": {
+        "discard": "1m",
+        "yaku_shanten": 1,
+        "measurement": "exact",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {
+          "3m": 4,
+          "4m": 4,
+          "5m": 4,
+          "6m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "5p": 4,
+          "6p": 4,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "4s": 4,
+          "6s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "estimated_improving_draws": {},
+        "ordinary_shanten": 1,
+        "ordinary_ukeire": 111
+      },
+      "pinfu": {
+        "discard": "2m",
+        "yaku_shanten": 2,
+        "measurement": "heuristic",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [
+          {
+            "type": "concealed_tile",
+            "severity": "removable",
+            "reason": "value_honor_cannot_be_pinfu_pair",
+            "tile": "E"
+          },
+          {
+            "type": "concealed_tile",
+            "severity": "removable",
+            "reason": "value_honor_cannot_be_pinfu_pair",
+            "tile": "E"
+          },
+          {
+            "type": "concealed_group",
+            "severity": "removable",
+            "reason": "triplet_must_be_restructured",
+            "tile": "1m"
+          }
+        ],
+        "ukeire": {},
+        "estimated_improving_draws": {
+          "3m": 4,
+          "2p": 4,
+          "5p": 4
+        },
+        "ordinary_shanten": 2,
+        "ordinary_ukeire": 121
+      },
+      "sanankou": {
+        "discard": "2m",
+        "yaku_shanten": 2,
+        "measurement": "lower_bound",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {},
+        "estimated_improving_draws": {
+          "3m": 4,
+          "2p": 4,
+          "3p": 2,
+          "4p": 2,
+          "5p": 4,
+          "5s": 2,
+          "E": 2
+        },
+        "ordinary_shanten": 2,
+        "ordinary_ukeire": 121
+      },
+      "suuankou": {
+        "discard": "1m",
+        "yaku_shanten": 2,
+        "measurement": "exact",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {
+          "2m": 2,
+          "3p": 2,
+          "4p": 2,
+          "5s": 2,
+          "E": 2
+        },
+        "estimated_improving_draws": {},
+        "ordinary_shanten": 1,
+        "ordinary_ukeire": 111
+      },
+      "toitoi": {
+        "discard": "1m",
+        "yaku_shanten": 2,
+        "measurement": "exact",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {
+          "2m": 2,
+          "3p": 2,
+          "4p": 2,
+          "5s": 2,
+          "E": 2
+        },
+        "estimated_improving_draws": {},
+        "ordinary_shanten": 1,
+        "ordinary_ukeire": 111
+      },
+      "yakuhai_E": {
+        "discard": "1m",
+        "yaku_shanten": 2,
+        "measurement": "lower_bound",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {},
+        "estimated_improving_draws": {
+          "E": 2
+        },
+        "ordinary_shanten": 1,
+        "ordinary_ukeire": 111
+      },
+      "iipeikou": {
+        "discard": "1m",
+        "yaku_shanten": 3,
+        "measurement": "heuristic",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {},
+        "estimated_improving_draws": {
+          "2m": 2,
+          "3m": 4,
+          "2p": 4,
+          "3p": 2,
+          "4p": 2,
+          "5p": 4,
+          "5s": 2,
+          "E": 2
+        },
+        "ordinary_shanten": 1,
+        "ordinary_ukeire": 111
+      },
+      "sankantsu": {
+        "discard": "2m",
+        "yaku_shanten": 2,
+        "measurement": "heuristic",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {},
+        "estimated_improving_draws": {},
+        "ordinary_shanten": 2,
+        "ordinary_ukeire": 121
+      },
+      "suukantsu": {
+        "discard": "2m",
+        "yaku_shanten": 3,
+        "measurement": "heuristic",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [],
+        "ukeire": {},
+        "estimated_improving_draws": {},
+        "ordinary_shanten": 2,
+        "ordinary_ukeire": 121
+      },
+      "chanta": {
+        "discard": "4p",
+        "yaku_shanten": 3,
+        "measurement": "lower_bound",
+        "route_state": "none",
+        "feasibility": "possible",
+        "yaku_blockers": [
+          {
+            "type": "concealed_tile",
+            "severity": "removable",
+            "reason": "incompatible_with_outside_hand",
+            "tile": "4p"
+          },
+          {
+            "type": "concealed_tile",
+            "severity": "removable",
+            "reason": "incompatible_with_outside_hand",
+            "tile": "5s"
+          },
+          {
+            "type": "concealed_tile",
+            "severity": "removable",
+            "reason": "incompatible_with_outside_hand",
+            "tile": "5s"
+          }
+        ],
+        "ukeire": {},
+        "estimated_improving_draws": {
+          "2m": 2,
+          "3m": 4,
+          "7m": 4,
+          "8m": 4,
+          "9m": 4,
+          "1p": 4,
+          "2p": 4,
+          "3p": 2,
+          "7p": 4,
+          "8p": 4,
+          "9p": 4,
+          "1s": 4,
+          "2s": 4,
+          "3s": 4,
+          "7s": 4,
+          "8s": 4,
+          "9s": 3,
+          "E": 2,
+          "S": 4,
+          "W": 4,
+          "N": 4,
+          "P": 4,
+          "F": 4,
+          "C": 4
+        },
+        "ordinary_shanten": 2,
+        "ordinary_ukeire": 121
+      }
+    },
+    "yaku_comparison": {
+      "actual_discard": "1m",
+      "alternative_discard": "1m",
+      "deltas": []
+    }
+  }
+]

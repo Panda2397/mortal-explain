@@ -13,6 +13,8 @@ def calculate_ukeire(
     hand: list[str],
     visible_tiles: list[str] | None = None,
     open_melds: int = 0,
+    *,
+    known_public_tiles: list[str] | None = None,
 ) -> dict:
     """
     Calculate effective draws for a 13-tile-equivalent hand.
@@ -21,8 +23,11 @@ def calculate_ukeire(
         Concealed tiles AFTER a discard.
 
     visible_tiles:
-        Publicly visible tiles outside the player's concealed hand:
+        Known public tiles outside the player's concealed hand:
         discards, open melds, dora indicators, etc.
+
+    known_public_tiles:
+        Keyword-only migration alias for ``visible_tiles``. Do not pass both.
 
     open_melds:
         Number of completed open melds.
@@ -38,8 +43,13 @@ def calculate_ukeire(
         }
     """
 
-    if visible_tiles is None:
-        visible_tiles = []
+    if visible_tiles is not None and known_public_tiles is not None:
+        raise ValueError("Pass visible_tiles or known_public_tiles, not both")
+    public_tiles = (
+        known_public_tiles
+        if known_public_tiles is not None
+        else visible_tiles or []
+    )
 
     route_state = calculate_shanten_by_type(hand, open_melds)
     current_shanten = route_state["minimum"]
@@ -48,7 +58,7 @@ def calculate_ukeire(
     # This includes our own hand and public visible tiles.
     known_tiles = Counter()
 
-    for tile in hand + visible_tiles:
+    for tile in hand + public_tiles:
         known_tiles[tile_to_index(tile)] += 1
 
     effective_tiles = {}
@@ -97,6 +107,8 @@ def evaluate_discards(
     hand: list[str],
     visible_tiles: list[str] | None = None,
     open_melds: int = 0,
+    *,
+    known_public_tiles: list[str] | None = None,
 ) -> list[dict]:
     """
     Evaluate all unique candidate discards from a
@@ -107,8 +119,13 @@ def evaluate_discards(
         2. Higher ukeire
     """
 
-    if visible_tiles is None:
-        visible_tiles = []
+    if visible_tiles is not None and known_public_tiles is not None:
+        raise ValueError("Pass visible_tiles or known_public_tiles, not both")
+    public_tiles = (
+        known_public_tiles
+        if known_public_tiles is not None
+        else visible_tiles or []
+    )
 
     results = []
 
@@ -119,7 +136,7 @@ def evaluate_discards(
 
         evaluation = calculate_ukeire(
             remaining_hand,
-            visible_tiles=visible_tiles + [discard],
+            visible_tiles=public_tiles + [discard],
             open_melds=open_melds,
         )
 

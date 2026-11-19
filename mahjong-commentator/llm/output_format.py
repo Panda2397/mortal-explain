@@ -8,8 +8,7 @@ Rules:
 - Never invent hand tiles, numerical values, or probabilities.
 - Lower shanten is preferred by this evaluator.
 - Compare ukeire directly only at equal shanten.
-- A discarded tile's dora value is a potential loss,
-  not a benefit of discarding it.
+- `hand_dora` describes dora remaining in the post-discard hand.
 - Distinguish winds, dragons, and yakuhai.
 - If information is missing, write "未提供".
 - Do not add extra sections or explanations.

@@ -18,6 +18,9 @@ def index_to_tile(index: int) -> str:
     Red fives are represented as normal fives.
     """
 
+    if not isinstance(index, int) or not 0 <= index < 34:
+        raise ValueError(f"Invalid 34-tile index: {index}")
+
     if 0 <= index <= 8:
         return f"{index + 1}m"
 
@@ -47,12 +50,22 @@ def tile_to_index(tile: str) -> int:
         5mr -> 4  (red five)
     """
 
+    if not isinstance(tile, str):
+        raise ValueError(f"Invalid MJAI tile: {tile!r}")
+
     if tile in HONORS:
         return HONORS[tile]
 
-    # Normalize red fives
+    # A 34-type structural vector cannot represent red identity separately.
+    # Normalize red fives here; use ``hand_to_34_with_red`` when bonus-tile
+    # identity is also needed.
     if tile.endswith("r"):
+        if len(tile) != 3 or tile[0] != "5" or tile[1] not in "mps":
+            raise ValueError(f"Invalid MJAI red tile: {tile}")
         tile = tile[:-1]
+
+    if len(tile) != 2 or tile[0] not in "123456789":
+        raise ValueError(f"Invalid MJAI tile: {tile}")
 
     number = int(tile[0])
     suit = tile[1]
@@ -71,7 +84,11 @@ def tile_to_index(tile: str) -> int:
 
 def hand_to_34(hand: list[str]) -> list[int]:
     """
-    Convert a list of MJAI tiles to a 34-element count array.
+    Convert MJAI tiles to a 34-element structural count array.
+
+    Red fives are included in their normal five slot because they are not a
+    separate structural tile type. Use ``hand_to_34_with_red`` to retain
+    their bonus identity alongside the structural counts.
     """
 
     tiles = [0] * 34
@@ -81,6 +98,19 @@ def hand_to_34(hand: list[str]) -> list[int]:
         tiles[index] += 1
 
     return tiles
+
+
+def hand_to_34_with_red(hand: list[str]) -> dict:
+    """Return structural counts together with per-suit red-five counts."""
+    red_fives = {
+        suit: hand.count(f"5{suit}r")
+        for suit in ("m", "p", "s")
+    }
+    return {
+        "counts": hand_to_34(hand),
+        "red_fives": red_fives,
+        "red_dora_count": sum(red_fives.values()),
+    }
 
 
 def calculate_shanten(
